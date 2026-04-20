@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ССО - Статут та Правила</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #1e293b 100%);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-color: rgba(96, 165, 250, 0.3);
+        }
+        .nav-link:hover {
+            color: #60a5fa;
+        }
+        .nav-link.active {
+            color: #60a5fa;
+            border-bottom: 2px solid #60a5fa;
+        }
+        
+        /* Scroll animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(96, 165, 250, 0.4);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .rule-item {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .rule-item:hover {
+            background: rgba(96, 165, 250, 0.1);
+            border-left-color: #60a5fa;
+            padding-left: 1rem;
+        }
+        
+        .section-icon {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        /* Gradient text animation */
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .gradient-text-animated {
+            background: linear-gradient(90deg, #60a5fa, #22d3ee, #60a5fa);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease infinite;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #3b82f6, #1e40af);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #60a5fa, #3b82f6);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-8 left-0 right-0 bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-700">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-400">ССО</span>
+                    <span class="ml-2 text-sm text-gray-400">Статут</span>
+                </div>
+                <div class="hidden md:flex flex-1 justify-between space-x-2">
+                    <a href="index.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors flex-1 text-center">← Головна</a>
+                    <a href="zsu.html" class="text-sm font-medium text-yellow-400 hover:text-yellow-300 transition-colors flex-1 text-center">🇺🇦 ЗСУ Присяга</a>
+                    <a href="#pravyla-patrulyuvannya" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Правила патрулювання</a>
+                    <a href="#zagalni" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Загальні положення</a>
+                    <a href="#subordinatsiya" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Субординація</a>
+                    <a href="#patrul" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Патруль</a>
+                    <a href="#stroyovi" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Стройові</a>
+                    <a href="#speczavdannya" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Спец. завдання</a>
+                    <a href="#zaborony" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Заборони</a>
+                    <a href="#zvity" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Звіти</a>
+                    <a href="#keruyuchiy" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Керуючий склад</a>
+                    <a href="#zvilnennya" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Звільнення</a>
+                    <a href="#kod4" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Код 4</a>
+                    <a href="#zvernennya" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Звернення</a>
+                    <a href="#obovyazky" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Обов'язки</a>
+                    <a href="#tenkody" class="nav-link text-sm font-medium transition-colors flex-1 text-center">Тен-коди</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-800 border-t border-slate-700">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block text-sm font-medium text-gray-300 hover:text-white py-2">← Головна</a>
+                <a href="zsu.html" class="block text-sm font-medium text-yellow-400 hover:text-yellow-300 py-2">🇺🇦 ЗСУ Присяга</a>
+                <a href="#pravyla-patrulyuvannya" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Правила патрулювання</a>
+                <a href="#zagalni" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Загальні положення</a>
+                <a href="#subordinatsiya" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Субординація</a>
+                <a href="#patrul" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Патруль</a>
+                <a href="#stroyovi" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Стройові</a>
+                <a href="#speczavdannya" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Спец. завдання</a>
+                <a href="#zaborony" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Заборони</a>
+                <a href="#zvity" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Звіти</a>
+                <a href="#keruyuchiy" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Керуючий склад</a>
+                <a href="#zvilnennya" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Звільнення</a>
+                <a href="#kod4" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Код 4</a>
+                <a href="#zvernennya" class="block text-sm font-medium text-gray-300 hover:text-blue-400 py-2">Звернення</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-4 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-40 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="w-full text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center bg-blue-600/20 border border-blue-500/30 rounded-full px-4 py-2 mb-8">
+                <span class="text-blue-400 text-sm font-medium">🎖️ Сил Спеціальних Операцій</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 tracking-tight">
+                <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">ССО</span>
+                <span class="text-white"> Статут</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Офіційні правила та положення Сил Спеціальних Операцій<br>
+                <span class="text-gray-500 text-lg">Дотримуйтесь статуту - виконуйте обов'язок</span>
+            </p>
+            
+            <!-- Stats/Badges -->
+            <div class="flex flex-wrap justify-center gap-6 mb-10">
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 py-4">
+                    <div class="text-3xl font-bold text-blue-400">11</div>
+                    <div class="text-sm text-gray-400">Розділів</div>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 py-4">
+                    <div class="text-3xl font-bold text-green-400">100%</div>
+                    <div class="text-sm text-gray-400">Актуальність</div>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl px-6 py-4">
+                    <div class="text-3xl font-bold text-yellow-400">⚔️</div>
+                    <div class="text-sm text-gray-400">ЗСУ</div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="flex items-center space-x-2 text-gray-500 bg-slate-800/30 rounded-full px-4 py-2">
+                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm">Оновлено: 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full pb-20">
+        
+        <!-- Section 1: Правила патрулювання -->
+        <section id="pravyla-patrulyuvannya" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="w-full px-4 sm:px-6 lg:px-8 py-8">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 mr-4 section-icon">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white">1. Правила патрулювання</h2>
+                    </div>
+                
+                <!-- Дозволено -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-green-400 mb-4">✅ Дозволено:</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-xl p-4 border border-green-700/30">
+                            <p class="text-white">В патруль дозволено їздити тільки після того, як здали академію та стали Бійцем ССО</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-xl p-4 border border-green-700/30">
+                            <p class="text-white">Відкривати вогонь на ураження у разі нападу</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-xl p-4 border border-green-700/30">
+                            <p class="text-white">Дозволено патруль однієї людини, але при виявленні небезпеки обов'язковий запит підкріплення</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-xl p-4 border border-green-700/30">
+                            <p class="text-white">Академіку ССО дозволено їхати в патруль тільки з Офіцерами або з Керівництвом</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Заборонено -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-red-400 mb-4">🚫 Заборонено:</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gradient-to-br from-red-900/20 to-orange-900/20 rounded-xl p-4 border border-red-700/30">
+                            <p class="text-white">Академіку ССО заборонено їздити в патруль самому</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-red-900/20 to-orange-900/20 rounded-xl p-4 border border-red-700/30">
+                            <p class="text-white">Заборонено під час патрулю підкорюватися співробітникам інших фракцій</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-red-900/20 to-orange-900/20 rounded-xl p-4 border border-red-700/30">
+                            <p class="text-white">Порушувати ПДР</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-red-900/20 to-orange-900/20 rounded-xl p-4 border border-red-700/30">
+                            <p class="text-white">Виїжджати без доповіді</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Завдання під час патрулю -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-blue-400 mb-4">🎯 Завдання під час патрулю:</h3>
+                    <div class="bg-gradient-to-r from-blue-900/20 to-indigo-900/20 rounded-xl p-5 border border-blue-700/30">
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <p>Слідкувати за порядком, тобто зупиняти перестрілки, бійки та конфлікти</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <p>Спасіння жителів</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <p>Відбивати напади на об'єкти</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <p>Допомога іншим Держ. структурам</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <p>Перевірка підозрілих автомобілей</p>
+                            </li>
+                        </ul>
+                        <div class="mt-4 bg-red-900/30 rounded-lg p-4 border border-red-700/30">
+                            <p class="text-red-400 font-semibold">⚠️ За порушення ПДР ми НЕ зупиняємо!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Зони відповідальності на водному патрулюванні -->
+                <div>
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">🚢 Зони відповідальності на водному патрулюванні:</h3>
+                    <div class="grid md:grid-cols-3 gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 rounded-xl p-4 border border-cyan-700/30 text-center">
+                            <p class="text-white font-semibold">ВЧ</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 rounded-xl p-4 border border-cyan-700/30 text-center">
+                            <p class="text-white font-semibold">Київ</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 rounded-xl p-4 border border-cyan-700/30 text-center">
+                            <p class="text-white font-semibold">Дніпро</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700/30">
+                            <img src="https://i.ibb.co/KcJgmvXz/1.jpg" alt="Зона 1" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700/30">
+                            <img src="https://i.ibb.co/yB790fbH/2.jpg" alt="Зона 2" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700/30">
+                            <img src="https://i.ibb.co/pjbZJSZD/3.jpg" alt="Зона 3" class="w-full h-48 object-cover">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Загальні положення -->
+        <section id="zagalni" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">2. Загальні положення</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-blue-600/30 to-blue-500/30 text-blue-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">📋 1.1</span>
+                        <p class="leading-relaxed">Найважливішим документом Міністерства оборони є статут.</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-blue-600/30 to-blue-500/30 text-blue-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">📋 1.2</span>
+                        <p class="leading-relaxed">Кожен військово службовий зобов'язаний дотримуватися статуту.</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-blue-600/30 to-blue-500/30 text-blue-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">📋 1.3</span>
+                        <p class="leading-relaxed">Незнання статуту не звільняє від відповідальності.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Субординація -->
+        <section id="subordinatsiya" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">3. Субординація</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-green-600/30 to-green-500/30 text-green-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">👥 2.1</span>
+                        <p class="leading-relaxed"><strong>Загальний Код 5 підрозділу може скликати:</strong> Начальник, Заступник Начальника, Начальник Академії, Заступник Начальника Академії, Головний офіцер. Всі мають явитись на загальний Код 5 підрозділу.</p>
+                    </div>
+                    <div class="ml-8 bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-xl p-4 border border-yellow-700/30">
+                        <p class="text-sm font-semibold text-yellow-400 mb-2">⚠️ 2.1.1 Не явитись на Код-5</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-green-600/30 to-green-500/30 text-green-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">👥 2.1.2</span>
+                        <p class="leading-relaxed">Кожень бієць може скликати Код 5 для нижчих по посаді бійців для проведення тренуваннь та інструктажів.</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-green-600/30 to-green-500/30 text-green-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">👥 2.2</span>
+                        <p class="leading-relaxed">Кожен має підкорюватись старшому по посаді.</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-green-600/30 to-green-500/30 text-green-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">👥 2.3</span>
+                        <p class="leading-relaxed">Ігнорування наказу старшого по посаді, у грі так і в спец.зв'язку.</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Правила патрулю -->
+        <section id="patrul" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">4. Правила патрулю</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 text-gray-300">
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.1 Патруль дозволено виключно від 2 осіб (по ВЧ дозволено одному)</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.2 Максимальна кількість патрулю 3 особи (Зовнішній патруль ВЧ дозволено 4 особи)</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.3 Виїзд у патруль будучи академіком заборонено</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.4 Надмірне порушення ПДР (Виключення погоня)</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.5 Порушення цілей патрулювання</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.6 Патруль міста дозволений лише на СТЗ Nissan Patrol, Toyota Hilux або спец.транспорті</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.7 Зовнішній патруль ВЧ дозволений на СТЗ Nissan Patrol, Краз Спартан, Toyota Hilux або спец.транспорті</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.8 Водний патруль дозволено від 2 осіб</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.9 Водний патруль дозволено лише на СТЗ (Виключення: спец.завдання)</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.10 В патруль дозволено їздити тільки після того, як здали академію та стали Бійцем ССО</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-900/20 to-blue-900/20 rounded-xl p-4 border border-green-700/30 hover:border-green-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.11 Відкривати вогонь на ураженням у разі нападу</p>
+                        <p class="text-sm text-green-400 font-medium">✅ Дозволено</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-900/20 to-blue-900/20 rounded-xl p-4 border border-green-700/30 hover:border-green-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.12 Академіку ССО дозволено їхати в патруль тільки з Офіцерами або з Керівництвом</p>
+                        <p class="text-sm text-green-400 font-medium">✅ Дозволено</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-red-900/20 to-orange-900/20 rounded-xl p-4 border border-red-700/30 hover:border-red-600/50 transition-all duration-300 md:col-span-2">
+                        <p class="font-semibold text-white mb-2">🚗 3.13 Заборонено під час патрулю підкорюатися співробітникам інших фракцій (При конфліктній ситуації із співробітником іншої фракції - викликати Начальство)</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Заборонено</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 rounded-xl p-4 border border-yellow-700/30 hover:border-yellow-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚗 3.14 Заборонено порушувати ПДР</p>
+                        <p class="text-sm text-red-400 font-medium">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Стройові правила -->
+        <section id="stroyovi" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">5. Стройові правила</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-purple-600/30 to-purple-500/30 text-purple-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🏛️ 4.1</span>
+                        <p class="leading-relaxed">Підрозділ ССО на загальному Коді-5 шикується на 1 клітинці на 1 плацу в 2 колони.</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-purple-600/30 to-purple-500/30 text-purple-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🏛️ 4.2</span>
+                        <p class="leading-relaxed">Кодом-5 для ССО керує той хто скликав, а не старший за званням.</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-purple-600/30 to-purple-500/30 text-purple-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🏛️ 4.3</span>
+                        <p class="leading-relaxed">На загальному КОДі-5 ССО шикується на 1 клітинці.</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання за порушення правила: Попередження/Догана</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Спец завдання -->
+        <section id="speczavdannya" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">6. Спец завдання</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-red-600/30 to-red-500/30 text-red-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">⚡ 5.1</span>
+                        <p class="leading-relaxed">Кожен військослужбовець зі звання Капрал має право отримати спец завдання. Видає їх виключно @Нач.ССО. Термін на виконання спец завдання 5 днів. Про спец. завдання може знати лише людина, яка отримала спец завдання, @Нач.ССО який видав його та @Куратор ССО. Для спец завдання у разі необхідності може бути виданий спец транспорт ССО.</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-red-600/30 to-red-500/30 text-red-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">⚡ 5.2</span>
+                        <p class="leading-relaxed">Заборонено розказувати іншим про спец. завдання.</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Догана/2 догани</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-red-600/30 to-red-500/30 text-red-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">⚡ 5.3</span>
+                        <p class="leading-relaxed">Невиконання спец завдання у встановлені строки</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана (Виключення: немає змоги)</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-red-600/30 to-red-500/30 text-red-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">⚡ 5.4</span>
+                        <p class="leading-relaxed">Використовувати спец завдання в особистих цілях.</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Догана</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-red-600/30 to-red-500/30 text-red-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">⚡ 5.5</span>
+                        <p class="leading-relaxed">Випитувати іншого бійця про його спец завдання, або якщо Ви дізнались розказувати іншим.</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Догана</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-red-600/30 to-red-500/30 text-red-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">⚡ 5.6</span>
+                        <p class="leading-relaxed">Погано виконане спец завдання</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-red-600/30 to-red-500/30 text-red-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">⚡ 5.7</span>
+                        <p class="leading-relaxed">Використання FPV-дрона дозволено лише з дозволу Начальника. (Виключення: якщо використання дрона прописане в завданні)</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Загальні заборони -->
+        <section id="zaborony" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-orange-600 to-orange-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">7. Загальні заборони</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-orange-600/30 to-orange-500/30 text-orange-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚫 6.1</span>
+                        <p class="leading-relaxed">Заборонено порушувати Статут Збройних Сил України</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана/Звільнення</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-orange-600/30 to-orange-500/30 text-orange-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚫 6.2</span>
+                        <p class="leading-relaxed">Заборонено порушувати інші правила ЗСУ: Статут Гарнізонної та Вартової служби та усі інші статути</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана/Звільнення</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-orange-600/30 to-orange-500/30 text-orange-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚫 6.3</span>
+                        <p class="leading-relaxed">Заборонено порушувати усі правила серверу, які вказані на форумі проекту</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана/Звільнення/Звільнення +ЧС ССО</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-orange-600/30 to-orange-500/30 text-orange-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚫 6.4</span>
+                        <p class="leading-relaxed">Заборонено ігнорувати накази старших по посаді в ССО та старших по званню</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-orange-600/30 to-orange-500/30 text-orange-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚫 6.5</span>
+                        <p class="leading-relaxed">Заборонено поводитись халатно до свого підрозділу/посади/завдання</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана/Звільнення</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-orange-600/30 to-orange-500/30 text-orange-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚫 6.6</span>
+                        <p class="leading-relaxed">Заборонено вводити в оману побратимів, зрада</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана/Звільнення</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-orange-600/30 to-orange-500/30 text-orange-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚫 6.7</span>
+                        <p class="leading-relaxed">Невиконання обов'язків/норму обов'язків</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-orange-600/30 to-orange-500/30 text-orange-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚫 6.8</span>
+                        <p class="leading-relaxed">При отриманні 3 доган, бієць підрозділу звільняється за пунктом 6.8</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Звіти -->
+        <section id="zvity" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">8. Звіти</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-cyan-600/30 to-cyan-500/30 text-cyan-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">📊 7.1</span>
+                        <p class="leading-relaxed">Кожен військовослужбовець повинен подавати "Щотижневий звіт". Щотижневий звіт подається до 22:00 суботи</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-cyan-600/30 to-cyan-500/30 text-cyan-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">📊 7.2</span>
+                        <p class="leading-relaxed">Кожен військовослужбовець повинен здати суботник до кінця суботи. (в той же канал куди і звіт) <br><span class="text-sm text-gray-400">Суботник - це рп відігровка прибирання об'єкту, 3-5 скрінів з відігровками в чат.</span></p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-cyan-600/30 to-cyan-500/30 text-cyan-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">📊 7.3</span>
+                        <p class="leading-relaxed">Виконану роботу дозволено закидувати в одну силку</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-cyan-600/30 to-cyan-500/30 text-cyan-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">📊 7.4</span>
+                        <p class="leading-relaxed">Нездача щотижневого звіту</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана (у разі не зняття догани (та що в підрозділі) протягом 7 днів, це покарання переходить в системну догану (буде в планшеті)</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-cyan-600/30 to-cyan-500/30 text-cyan-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">📊 7.5</span>
+                        <p class="leading-relaxed">Нездача суботника</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-cyan-600/30 to-cyan-500/30 text-cyan-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">📊 7.6</span>
+                        <p class="leading-relaxed">Дуже мало роботи</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Основні положення керуючого складу -->
+        <section id="keruyuchiy" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">9. Основні положення керуючого складу</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-indigo-600/30 to-indigo-500/30 text-indigo-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">👑 8.1</span>
+                        <p class="leading-relaxed">Приймати академію мають право лише Начальник академії та Заступник начальника академії. (Виключення: За рішенням Начальника ССО та Заступника начальника ССО можуть бути призначені особи для прийняття академії)</p>
+                        <p class="text-sm text-red-400 font-medium ml-2">🔴 Покарання: Попередження/Догана</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-indigo-600/30 to-indigo-500/30 text-indigo-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">👑 8.2</span>
+                        <p class="leading-relaxed">Керівництво підрозділу може скасувати рішення про прийняття нового бійця, прийняте керівництвом академії, або офіцерами</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-indigo-600/30 to-indigo-500/30 text-indigo-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">👑 8.3</span>
+                        <p class="leading-relaxed">У керівництва підрозділу та академії навички володіння гвинтівкою, м4 та витривалість мають бути прокачані на 100%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Звільнення з підрозділу -->
+        <section id="zvilnennya" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-pink-600 to-pink-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">10. Звільнення з підрозділу</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-pink-600/30 to-pink-500/30 text-pink-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚪 9.1</span>
+                        <p class="leading-relaxed">Для звільнення з підрозділу Вам треба подати рапорт в канал ⁠『🫵』‖рапорт-на-звільнення</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-pink-600/30 to-pink-500/30 text-pink-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚪 9.2</span>
+                        <p class="leading-relaxed">Тільки після схвалення рапорту ви зможете покинути підрозділ</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-pink-600/30 to-pink-500/30 text-pink-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚪 9.3</span>
+                        <p class="leading-relaxed">Для переводу в іншу фракцію Вам також потрібно подати рапорт</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-pink-600/30 to-pink-500/30 text-pink-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚪 9.4</span>
+                        <p class="leading-relaxed">У разі якщо ви покинули підрозділ або лави ЗСУ без подачі рапорту на звільнення - Вас буде занесено до ЧС підрозділу</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-pink-600/30 to-pink-500/30 text-pink-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚪 9.5</span>
+                        <p class="leading-relaxed">Якщо ви маєте в користуванні номерний знак "ССО" - Ви зобов'язані його здати начальнику підрозділу</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Код 4 - військовий стан -->
+        <section id="kod4" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-rose-600 to-rose-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">11. Код 4 - військовий стан</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-rose-600/30 to-rose-500/30 text-rose-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚨 10.1</span>
+                        <p class="leading-relaxed">При Код 4 на ВЧ - всі бійці ССО виїзжають на зовнішнє патрулювання ВЧ.</p>
+                    </div>
+                    <div class="flex items-start rule-item rounded-lg p-3 -ml-3">
+                        <span class="bg-gradient-to-r from-rose-600/30 to-rose-500/30 text-rose-400 px-4 py-1.5 rounded-full text-sm font-semibold mr-4 mt-0.5 shadow-lg">🚨 10.2</span>
+                        <p class="leading-relaxed">При Код 4 в країні - за наказом Начальника ССО, бійці розділяються на 2 групи. Перша група виїзжає на зовнішнє патрулювання ВЧ. Друга група виїзжає на штучно створений блок-пост біля ВЧ.</p>
+                    </div>
+                    <div class="ml-8 bg-gradient-to-r from-red-900/30 to-orange-900/30 rounded-xl p-4 border border-red-700/30 space-y-3">
+                        <div>
+                            <p class="text-sm font-semibold text-yellow-400 mb-1">⚠️ 10.2.1</p>
+                            <p class="text-sm text-gray-300 leading-relaxed">Група, яка виїхала на штучно створений блок-пост, має перевіряти всіх громадян, які перетинають блок-пост і пропускати тільки співробітників державних структур, якщо на це є необхідність. Всіх інших повідомити, що вони мать покинути територію блок-посту. (Виключення: якщо співробітник фракції на СТЗ, його пропускати без перевірки)</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-yellow-400 mb-1">⚠️ 10.2.2</p>
+                            <p class="text-sm text-gray-300 leading-relaxed">При непокорі, бієць має затримати порушника та передати його співробітникам НПУ та СБУ.</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-yellow-400 mb-1">⚠️ 10.2.3</p>
+                            <p class="text-sm text-gray-300 leading-relaxed">Якщо особа порушує правила перетину блок-посту або відкрила вогонь - дозволяється відкрити вогонь на ураження.</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-yellow-400 mb-1">⚠️ 10.2.4</p>
+                            <p class="text-sm text-gray-300 leading-relaxed">Якщо особа загрожує життю військовослужбовців та навколишнім громадянам - дозволяється відкрити вогонь на ураження.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: Порядок звернення -->
+        <section id="zvernennya" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">12. Порядок звернення</h2>
+                </div>
+                <div class="bg-gradient-to-r from-teal-900/30 to-cyan-900/30 rounded-xl p-6 border border-teal-700/30 text-gray-300">
+                    <p class="mb-4 leading-relaxed">💬 Військовослужбовці ЗСУ вирішують службові та особисті питання, звертаючись до свого безпосереднього начальника (найближчого прямого командира). Якщо він не може вирішити проблему, звертаються до наступного прямого начальника.</p>
+                    <p class="text-yellow-400 font-semibold leading-relaxed">⚠️ Військовослужбовцям забороняється звертатися до вищого командування, минаючи свого безпосереднього начальника, з питань, що можуть бути вирішені на нижчому рівні. Усі звернення подаються згідно з установленою ієрархією підлеглості.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 13: Обов'язки бійця ССО -->
+        <section id="obovyazky" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">13. Обов'язки бійця ССО</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 text-gray-300">
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚔 Патрулювання по містах</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🚧 Виїзди на блокпости</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">⚖️ Заходи правового режиму воєнного і надзвичайного стану</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">📢 Військові інформаційно-психологічні операції</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🛡️ Захист життя громадян та об'єктів держвласності у межах України</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🔫 Участь у боротьбі з незаконним обігом зброї та наркотиків</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🏰 Захист Військової Частини від дезертирів</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">💣 Боротьба з тероризмом</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🎪 Охорона різних важливих подій</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300">
+                        <p class="font-semibold text-white mb-2">🏥 Надання першої медичної допомоги при необхідності</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-xl p-4 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300 md:col-span-2">
+                        <p class="font-semibold text-white mb-2">🎯 Виконування наказів старших та виконування спец операцій та спец завдань по наказу Старшого Керівництва</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 14: Коди тен-коди ССО -->
+        <section id="tenkody" class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-violet-600 to-violet-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">14. Коди тен-коди ССО</h2>
+                </div>
+                <div class="space-y-6 text-gray-300">
+                    <!-- Патрулювання по містах -->
+                    <div class="bg-gradient-to-r from-violet-900/20 to-purple-900/20 rounded-xl p-5 border border-violet-700/30">
+                        <h3 class="text-xl font-bold text-white mb-4">🚗 Патрулювання по містах</h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-violet-400 mb-2">Виїзд у патрулювання в місто</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-1</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-1 Дніпро, склад: 1, код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-violet-400 mb-2">Продовження патрулювання в місті</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-2</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-2 Дніпро, склад: 1, код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-violet-400 mb-2">Повернення на ВЧ з міста</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-3</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-3 Дніпро, склад: 1, код: 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Патрулювання на ВЧ -->
+                    <div class="bg-gradient-to-r from-violet-900/20 to-purple-900/20 rounded-xl p-5 border border-violet-700/30">
+                        <h3 class="text-xl font-bold text-white mb-4">🏛️ Патрулювання на ВЧ</h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-violet-400 mb-2">Виїзд у патрулювання на ВЧ</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-1</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-1 ВЧ, склад: 1, код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-violet-400 mb-2">Продовження патрулювання на ВЧ</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-2</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-2 ВЧ, склад: 1, код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-violet-400 mb-2">Повернення з патрулювання на ВЧ</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-3</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-3 ВЧ, склад: 1, код: 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Запит на підкріплення -->
+                    <div class="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-xl p-5 border border-red-700/30">
+                        <h3 class="text-xl font-bold text-white mb-4">🆘 Запит на підкріплення</h3>
+                        <div class="bg-slate-800/50 rounded-lg p-4">
+                            <p class="font-semibold text-red-400 mb-2">Тен-Код: 1-5</p>
+                            <p class="text-xs text-gray-400">[Посада] 1-5 10-20 (місце розташування, наприклад СБУ-Д)</p>
+                        </div>
+                    </div>
+
+                    <!-- Спец. завдання -->
+                    <div class="bg-gradient-to-r from-amber-900/20 to-yellow-900/20 rounded-xl p-5 border border-amber-700/30">
+                        <h3 class="text-xl font-bold text-white mb-4">⚡ Спец. завдання</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-amber-400 mb-2">Виїзд на спец.завдання</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-6</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-6 СТЗ: Toyota, склад: 1, код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-amber-400 mb-2">Повернення зі спец.завдання на ВЧ</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-7</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-7 СТЗ: Toyota, склад: 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- БК (Бойовий Комплект) -->
+                    <div class="bg-gradient-to-r from-slate-900/20 to-gray-900/20 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="text-xl font-bold text-white mb-4">🎒 Виїзд по БК</h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-slate-400 mb-2">Виїзд по БК</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 6-1</p>
+                                <p class="text-xs text-gray-400">[Посада] 6-1 склад: 1 код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-slate-400 mb-2">Загрузив БК, повертаюсь на ВЧ</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 6-2</p>
+                                <p class="text-xs text-gray-400">[Посада] 6-2 склад: 1 код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-slate-400 mb-2">Привіз БК на ВЧ</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 6-3</p>
+                                <p class="text-xs text-gray-400">[Посада] 6-3 склад: 1 код: 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Водне патрулювання -->
+                    <div class="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-xl p-5 border border-cyan-700/30">
+                        <h3 class="text-xl font-bold text-white mb-4">🚢 Водне патрулювання</h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-cyan-400 mb-2">Вихід на водне патрулювання</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-11</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-11 ВЧ (або місто), склад: 2, код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-cyan-400 mb-2">Продовження водного патрулювання</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-12</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-12 ВЧ (або місто), склад: 2, код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-cyan-400 mb-2">Повернення на ВЧ з водного патрулювання</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-13</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-13 ВЧ (або місто), склад: 2, код: 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Спец. транспорт -->
+                    <div class="bg-gradient-to-r from-emerald-900/20 to-green-900/20 rounded-xl p-5 border border-emerald-700/30">
+                        <h3 class="text-xl font-bold text-white mb-4">🚙 Спец. транспорт</h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-emerald-400 mb-2">Виїзд у місто на Спец. транспорті</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-1</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-1 ОТЗ держ.номер "ССО" Дніпро, склад: 1, код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-emerald-400 mb-2">Продовження на Спец. транспорті</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-2</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-2 ОТЗ держ.номер "ССО" Дніпро, склад: 1, код: 1</p>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-4">
+                                <p class="font-semibold text-emerald-400 mb-2">Повернення на Спец. транспорті</p>
+                                <p class="text-sm text-white mb-2">Тен-Код: 1-3</p>
+                                <p class="text-xs text-gray-400">[Посада] 1-3 ОТЗ держ.номер "ССО" Дніпро, склад: 1, код: 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 py-8">
+        <div class="w-full px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2026 ССО - Сил Спеціальних Операцій</p>
+            <p class="text-gray-500 text-sm mt-2">Офіційний статут та правила підрозділу</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 invisible">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animations
+        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        animateOnScrollElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
