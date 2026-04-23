@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система підвищення</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #1e293b 100%);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-color: rgba(96, 165, 250, 0.3);
+        }
+        @keyframes pulse-glow-purple {
+            0%, 100% { box-shadow: 0 0 30px rgba(147, 51, 234, 0.3); }
+            50% { box-shadow: 0 0 60px rgba(147, 51, 234, 0.6); }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-8 left-0 right-0 bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-700">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-purple-400">⬆️</span>
+                    <span class="ml-2 text-sm text-gray-400">Система підвищення</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 rounded-lg text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 border border-slate-600/50 hover:border-slate-500/50">
+                        ← Головна
+                    </a>
+                    <div class="h-6 w-px bg-slate-600"></div>
+                    <a href="zsu.html" class="px-4 py-2 bg-blue-900/30 hover:bg-blue-800/40 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 transition-all duration-300 border border-blue-700/50 hover:border-blue-600/50">
+                        ЗСУ
+                    </a>
+                    <div class="h-6 w-px bg-slate-600"></div>
+                    <a href="sso.html" class="px-4 py-2 bg-yellow-900/30 hover:bg-yellow-800/40 rounded-lg text-sm font-medium text-yellow-400 hover:text-yellow-300 transition-all duration-300 border border-yellow-700/50 hover:border-yellow-600/50">
+                        ССО
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-4 relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-40 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-80 h-80 bg-violet-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-white mb-6 animate-on-scroll">
+                Система підвищення
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed animate-on-scroll">
+                Інформація про підвищення звань, іспити та вимоги<br>
+                <span class="text-gray-500 text-lg">ЗСУ та ССО</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full pb-20">
+        <!-- Посилання на іспити -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Посилання на онлайн іспити та таблиці</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-2">Рекрут - Солдат</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_RsXZJm0iWB0JcnYHei14PNaPcitfOcJRaGurdmo4XgDYww/viewform" target="_blank" class="px-4 py-2 bg-blue-600/30 hover:bg-blue-600/50 rounded-lg text-blue-300 text-sm font-medium transition-colors border border-blue-600/50">
+                                📝 Іспит
+                            </a>
+                            <a href="https://docs.google.com/spreadsheets/d/1rpKa9XF32C-N3FKB8XFxVVyFvCCTJ5WO2bYh2HESXZM/edit?gid=0#gid=0" target="_blank" class="px-4 py-2 bg-green-600/30 hover:bg-green-600/50 rounded-lg text-green-300 text-sm font-medium transition-colors border border-green-600/50">
+                                📊 Таблиця
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-2">Солдат - Ст.солдат</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQ4EdjKQjx3knJgAf6seMNFYFpJwQs4ttt70UJBTlVugGZiw/viewform" target="_blank" class="px-4 py-2 bg-blue-600/30 hover:bg-blue-600/50 rounded-lg text-blue-300 text-sm font-medium transition-colors border border-blue-600/50">
+                                📝 Іспит
+                            </a>
+                            <a href="https://docs.google.com/spreadsheets/d/1G-maRL4fBRSoCZGnFzZQsgdfQ8-KzJq4fpCAgAxwmjA/edit?gid=910132942#gid=910132942" target="_blank" class="px-4 py-2 bg-green-600/30 hover:bg-green-600/50 rounded-lg text-green-300 text-sm font-medium transition-colors border border-green-600/50">
+                                📊 Таблиця
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-2">Ст.солдат - Капітан</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeq5prjmS05B7A_VW3uMudJAGBmyreSpP6N72kNpvO1_w1IJw/viewform" target="_blank" class="px-4 py-2 bg-blue-600/30 hover:bg-blue-600/50 rounded-lg text-blue-300 text-sm font-medium transition-colors border border-blue-600/50">
+                                📝 Рапорт
+                            </a>
+                            <a href="https://docs.google.com/spreadsheets/d/1EYNJ8EF4ArJUO6M2y3IlllUBijzuBpMcI8ShHl8Dc9I/edit?resourcekey=&gid=2133570766#gid=2133570766" target="_blank" class="px-4 py-2 bg-green-600/30 hover:bg-green-600/50 rounded-lg text-green-300 text-sm font-medium transition-colors border border-green-600/50">
+                                📊 Таблиця
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Вимоги підвищення -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Вимоги підвищення (кількість днів)</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-white">
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-600/30">
+                        <span class="text-purple-300 font-semibold">1-2</span>
+                        <span class="text-gray-400"> — без кд</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-600/30">
+                        <span class="text-purple-300 font-semibold">2-3</span>
+                        <span class="text-gray-400"> — 1 день</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-600/30">
+                        <span class="text-purple-300 font-semibold">3-4</span>
+                        <span class="text-gray-400"> — 2 дні</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-600/30">
+                        <span class="text-purple-300 font-semibold">4-5</span>
+                        <span class="text-gray-400"> — 3 дні</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-600/30">
+                        <span class="text-purple-300 font-semibold">5-6</span>
+                        <span class="text-gray-400"> — 4 дні</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-600/30">
+                        <span class="text-purple-300 font-semibold">6-7</span>
+                        <span class="text-gray-400"> — 4 діб</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-600/30">
+                        <span class="text-purple-300 font-semibold">7-8</span>
+                        <span class="text-gray-400"> — 5 діб</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-600/30">
+                        <span class="text-purple-300 font-semibold">8-9</span>
+                        <span class="text-gray-400"> — обзвон</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-600/30">
+                        <span class="text-purple-300 font-semibold">9-10</span>
+                        <span class="text-gray-400"> — обзвон</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Час підвищення -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Час підвищення</h2>
+                </div>
+                <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                    <p class="text-white text-lg">Підвищення проводиться о: <span class="text-purple-300 font-bold">15:00, 18:00, 20:00</span></p>
+                    <p class="text-gray-400 text-sm mt-2">Примітка: Час може бути змінено за вказівкою Генерала/Полковника</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Система підвищення НК -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Система підвищення НК</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-3">Рекрут [1] - Солдат [2]</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Здати Статут</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Здати Субординація</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Здати Присяга</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Здати Графік роботи</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span class="text-green-300">Отримати роль у Discord</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-3">Солдат [2] - Старший солдат [3]</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Стройовий Статут</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Коди та Тен-Коди</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Система паркування</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Статут гарнізонної та вартової служб ЗСУ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Виконати завдання "Склад озброєння" 2 рази</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-3">Старший солдат [3] - Капрал [4]</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Здати академії вашого підрозділу</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Виконати завдання "Паливо" 3 рази</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">•</span>
+                                <span>Виконати завдання "Чищення озброєння" 1 раз</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Система підвищення ССО -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Система підвищення ССО</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-3">Капрал [4] - Сержант [5]</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати завдання "Наряд на АКПП" 2 рази</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Несення варти на бункері: 2 рази по 20 хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Несення варти на Вежі: 2 рази по 20 хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Патруль навколо ВЧ: 2 раз - 20 хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати завдання "Морське патрулювання" 1 раз</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Участь у тренуванні: 3 рази (для бійця). Для офіцера та вище - провести 5 тренувань</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Допомога на наборі або виїзд на БП: 1 раз</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-3">Сержант [5] - Старшина [6]</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Допомога на наборі або виїзд на БП: 2 рази</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Несення варти на бункері: 3 раз по 20хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Патруль навколо ВЧ: 2 раза по 20хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Патруль по містах: 2 раз - 20хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати завдання "Наряд на АКПП" 2 рази</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати завдання "Морське патрулювання" 2 рази</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Участь у РП-тренуваннях/школіннях: 5 разів (для бійця). Для офіцера та вище - Провести 4 РП-тренування/школіння</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати 1 Спец.завдання</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-3">Старшина [6] - Лейтенант [7]</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Допомога на наборі або виїзд на БП: 3 рази</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Несення варти на бункері: 3 раз по 20хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати завдання "Морське патрулювання" 2 рази</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати 1 Спец.Завдання</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Патруль навколо ВЧ: 3 раза по 20хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Патруль по містах: 3 раз - 20хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати завдання "Наряд на АКПП" 4 рази</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Привезти 150 Ящиків БК (рахується вся к-сть розгружена на ВЧ)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Взяти участь у тренуваннях 4 рази. Для офіцера та вище - Провести 6 тренувань</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Прослухати 3 лекції. Для офіцера та вище - провести 5 лекцій</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-white font-semibold mb-3">Лейтенант [7] - Капітан [8]</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Мати посаду офіцера, або више</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Допомоги на наборі або виїзд на БП: 4 раз</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Несення варти на бункері: 3 рази по 20хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати завдання "Морське патрулювання" 2 рази</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Провести 8 тренувань та 6 лекцій</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Патруль навколо ВЧ (Спартан або Toyota Hilux): 4 раз по 20 хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Патруль міста: 3 раз - 20 хв.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Виконати завдання "Наряд на АКПП" 5 разів</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Привезти 200 Ящиків БК (рахується вся к-сть розгружена на ВЧ)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>1 спец. Завдання</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">•</span>
+                                <span>Повторно здати Статут і правила ССО</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 py-8">
+        <div class="w-full px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2026 Збройні Сили України</p>
+            <p class="text-gray-500 text-sm mt-2">Система підвищення</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗСУ - Військова присяга</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #1e293b 100%);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-color: rgba(96, 165, 250, 0.3);
+        }
+        .section-icon {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(96, 165, 250, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(96, 165, 250, 0.4); }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-8 left-0 right-0 bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-700">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-400">ЗСУ</span>
+                    <span class="ml-2 text-sm text-gray-400">Військова присяга</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 rounded-lg text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 border border-slate-600/50 hover:border-slate-500/50">
+                        ← Головна
+                    </a>
+                    <div class="h-6 w-px bg-slate-600"></div>
+                    <a href="sso.html" class="px-4 py-2 bg-blue-900/30 hover:bg-blue-800/40 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 transition-all duration-300 border border-blue-700/50 hover:border-blue-600/50">
+                        ССО Статут →
+                    </a>
+                    <div class="h-6 w-px bg-slate-600"></div>
+                    <a href="pidvyshchennya.html" class="px-4 py-2 bg-purple-900/30 hover:bg-purple-800/40 rounded-lg text-sm font-medium text-purple-400 hover:text-purple-300 transition-all duration-300 border border-purple-700/50 hover:border-purple-600/50">
+                        ⬆️ Підвищення
+                    </a>
+                    <div class="h-6 w-px bg-slate-600"></div>
+                    <a href="academy.html" class="px-4 py-2 bg-orange-900/30 hover:bg-orange-800/40 rounded-lg text-sm font-medium text-orange-400 hover:text-orange-300 transition-all duration-300 border border-orange-700/50 hover:border-orange-600/50">
+                        📚 Академія
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-4 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-yellow-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-40 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-80 h-80 bg-green-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="w-full text-center relative z-10">
+            <div class="inline-flex items-center bg-yellow-600/20 border border-yellow-500/30 rounded-full px-4 py-2 mb-8">
+                <span class="text-yellow-400 text-sm font-medium">🇺🇦 Збройні Сили України</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 tracking-tight">
+                <span class="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent">Збройні Сили</span>
+                <span class="text-white"> України</span>
+            </h1>
+            
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">Документ юридичної сили, що має велике державне значення</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full px-4 sm:px-6 lg:px-8 pb-20">
+        
+        <!-- Introduction -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Про Військову присягу</h2>
+                </div>
+                
+                <div class="bg-gradient-to-r from-yellow-900/20 to-amber-900/20 rounded-xl p-6 border border-yellow-700/30">
+                    <p class="text-white leading-relaxed text-lg">Військова присяга ЗСУ — документ юридичної сили, що має велике державне значення.</p>
+                </div>
+
+                <div class="mt-6 bg-gradient-to-r from-slate-900/30 to-slate-800/30 rounded-xl p-6 border border-slate-700/30">
+                    <p class="text-white leading-relaxed">Громадяни України, які призвані або добровільно вступили на військову службу до Збройних Сил України, складають Військову присягу на вірність Українському народові в урочистій обстановці, зі зброєю в руках, біля Бойового прапора військової частини, перед строєм командирів і військовослужбовців.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Положення про порядок складання -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Положення про порядок складання військової присяги</h2>
+                </div>
+                
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">1.</p>
+                        <p class="text-white leading-relaxed">Кожен громадянин України, який вступає на військову службу, особисто складає військову присягу на вірність Українському народові та скріплює її власноручним підписом.</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">2.</p>
+                        <p class="text-white leading-relaxed">Військова присяга покладає на військовослужбовця всю повноту відповідальності за виконання ним військового обов'язку.</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">3.</p>
+                        <p class="text-white leading-relaxed mb-3">Військову присягу складають:</p>
+                        <ul class="space-y-2 text-gray-300 ml-4">
+                            <li>• військовослужбовці, які прибули до військової частини для проходження військової служби і раніше не складали військової присяги, складають присягу після проходження ними програми підготовки, вивчення основних положень військового законодавства України, військових статутів стосовно їх прав та обов'язків, виконання вправи стрільби із стрілецької зброї, але не пізніше ніж через місяць від дня прибуття до військової частини;</li>
+                            <li>• курсанти військово-навчальних закладів, військових відділень, кафедр та факультетів цивільних навчальних закладів, які раніше не складали військової присяги;</li>
+                            <li>• приписані до військової частини військовозобов'язані, які раніше не складали військової присяги, складають не пізніше ніж протягом п'яти днів після прибуття до військової частини для проходження навчальних зборів.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">4.</p>
+                        <p class="text-white leading-relaxed">День складання військової присяги є святковим для військової частини.</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">5.</p>
+                        <p class="text-white leading-relaxed">Час та місце складання військової присяги встановлюються окремим наказом командира військової частини й оголошуються всьому особовому складу.</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">6.</p>
+                        <p class="text-white leading-relaxed">На складання військової присяги за рішенням командира військової частини, запрошуються близькі родичі військовослужбовців, які складають Військову присягу.</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">7.</p>
+                        <p class="text-white leading-relaxed">Для складання Військової присяги військовослужбовці прибувають у парадному одязі. У воєнний час форма одягу встановлюється командиром військової частини.</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">8.</p>
+                        <p class="text-white leading-relaxed">У призначений час військова частина разом з оркестром шикується під Бойовим Прапором в лінію ротних (взводних) колон. Військовослужбовці, які складають присягу, стоять у перших рядах. Ритуал складання військової присяги розпочинається виступом командира військової частини про значення військової присяги для сумлінного, самовідданого служіння Україні.</p>
+                        <p class="text-gray-300 mt-3 leading-relaxed">Після цього командир частини дає розпорядження командирам підрозділів приступити до складання військовослужбовцями Військової присяги.</p>
+                        <p class="text-gray-300 mt-3 leading-relaxed">Командири підрозділів за алфавітним списком викликають військовослужбовців, які перед строєм проголошують текст Військової присяги, розписуються в цьому списку напроти свого прізвища. Після складання Військової присяги списки з особистими підписами осіб, які склали Військову присягу, командири підрозділів урочисто вручають командирові військової частини.</p>
+                        <p class="text-gray-300 mt-3 leading-relaxed">Командир військової частини вітає військовослужбовців зі складанням Військової присяги, а всю військову частину – з поповненням її особового складу. Після цього оркестр виконує Державний Гімн України.</p>
+                        <p class="text-gray-300 mt-3 leading-relaxed">Після виконання Державного Гімну України військова частина проходить урочистим маршем у порядку, визначеному у Стройовому статуті Збройних Сил України.</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">9.</p>
+                        <p class="text-white leading-relaxed">За несприятливих погодних умов складання Військової присяги проводиться у приміщенні актової зали.</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">10.</p>
+                        <p class="text-white leading-relaxed">Для військовослужбовців, які не змогли скласти військову присягу у визначений термін, призначається інший день і час.</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">11.</p>
+                        <p class="text-white leading-relaxed">Загальні списки осіб, які склали військову присягу, зберігаються у штабі військової частини пронумерованими, прошнурованими та скріпленими сургучевою печаткою в окремій папці.</p>
+                        <p class="text-gray-300 mt-3 leading-relaxed">Після закінчення встановленого терміну списки здаються на зберігання до архіву.</p>
+                        <p class="text-gray-300 mt-3 leading-relaxed">У військовому квитку (особистому посвідченні) військовослужбовця начальник штабу військової частини робить відмітку "Військову присягу склав (день, місяць, рік)".</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">12.</p>
+                        <p class="text-white leading-relaxed">За виконання вимог цього Положення, забезпечення збереження загальних списків та облік військовослужбовців, які склали Військову присягу, відповідає командир військової частини.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Текст присяги -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Текст Військової присяги ЗСУ</h2>
+                </div>
+                
+                <div class="bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-xl p-8 border border-green-700/30">
+                    <h3 class="text-xl font-bold text-green-400 mb-6">🇺🇦 Клятва на вірність народові України:</h3>
+                    <p class="text-white leading-relaxed italic text-lg">"Я, (прізвище, ім'я), вступаю на військову службу і урочисто клянусь народу України завжди бути вірним і відданим йому, сумлінно і чесно виконувати військовий обов'язок, накази командирів, неухильно дотримуватись Конституції і законів України, зберігати державну і військову таємницю.</p>
+                    <p class="text-white leading-relaxed italic text-lg mt-6">Я клянусь захищати Українську державу, непохитно стояти на сторожі її свободи, незалежності і суверенітету.</p>
+                    <p class="text-white leading-relaxed italic text-lg mt-6">Я присягаю ніколи не зрадити народу України."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Статут ЗСУ Header -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-yellow-900/30 to-amber-900/30 rounded-2xl p-6 md:p-8 border border-yellow-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Статут Збройних Сил України</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Загальні положення -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">1. Загальні положення</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">[1.1]</p>
+                        <p class="text-white leading-relaxed">Найважливішим документом Міністерства оборони є статут. Він визначає основні обов'язки та права військовослужбовців, а також порядок їхньої служби.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">[1.1.1]</p>
+                        <p class="text-white leading-relaxed">Кожен військово службовий зобов'язаний дотримуватися статуту.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">[1.1.2]</p>
+                        <p class="text-white leading-relaxed">Незнання статуту не звільняє від відповідальності.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">[1.2]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовці зобов'язані дотримуватись правил поведінки на території військової частини, включаючи плац. Недотримання цих правил може призвести до дисциплінарних стягнень, таких як попередження/догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">[1.3]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовець після проходження співбесіди має пройти курс початкової підготовки.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">[1.4]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовці до звання старшого солдату зобов'язані проживати в казармі (розташування на ВЧ).</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">[1.5]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовець зобов'язаний знати Полковників та Генерала в обличчя.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">[1.6]</p>
+                        <p class="text-white leading-relaxed">Призов — під час призову(військомату) сторонніх осіб біля військового комісаріату не повинно бути.</p>
+                        <p class="text-sm text-yellow-400 mt-2">Примітка: Якщо стороння особа все ж знаходиться на території:</p>
+                        <div class="mt-3 bg-blue-900/20 rounded-lg p-4 border border-blue-700/30">
+                            <p class="font-semibold text-blue-400 mb-2">Вперше</p>
+                            <p class="text-white leading-relaxed">[1.6.1] Уточнюємо причину перебування.</p>
+                            <p class="text-white leading-relaxed">[1.6.2] Пояснюємо, що перебування на цій території заборонено.</p>
+                            <p class="text-white leading-relaxed">[1.6.3] Повідомляємо, що ця особа має 10 секунд, щоб залишити територію.</p>
+                            <p class="text-white leading-relaxed">[1.6.4] Починаємо відлік. (У разі якщо стороння особа так і не покинула будівлі, викликаємо співробітників НПУ, щоб вивести з будівлі)</p>
+                        </div>
+                        <div class="mt-3 bg-blue-900/20 rounded-lg p-4 border border-blue-700/30">
+                            <p class="font-semibold text-blue-400 mb-2">Вдруге</p>
+                            <p class="text-white leading-relaxed">[1.6.5] Уточнюємо, якщо він не залишить територію протягом 10 секунд, він буде переданий НПУ за непокору.</p>
+                            <p class="text-white leading-relaxed">[1.6.6] Відраховуємо 10 секунд. Викликаємо співробітників НПУ.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-blue-400 mb-2">[1.7]</p>
+                        <p class="text-white leading-relaxed">Під час побудови бійцю заборонено:</p>
+                        <div class="mt-3 space-y-2">
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[1.7.1] Знаходитись у нетверезому стані. | Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[1.7.2] Використовувати будь-які анімації. | Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[1.7.3] Розмовляти в строю, писати в IC чат. | Покарання за порушення: Попередження/Гауптвахта/Догана.</p>
+                                <p class="text-sm text-green-400 mt-1">Примітка: в OOC спілкуватись можна, але під час строю не зловживати(спамити тощо)</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[1.7.4] Постійно запитувати, "Чому?" "А що буде?" "А скоро?". | Покарання за порушення: Попередження</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[1.7.5] Правила вище стосуються також побудови для заходів. (У цивільному одязі)</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[1.7.6] Військовослужбовець ЗСУ зобов'язаний в форменому одязі спілкуватися з громадянами державною мовою.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[1.7.7] Під час КОДу-5 заборонено користуватись телефоном. (дзвонити, гратися). |Покарання за порушення: Попередження/Догана</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[1.7.8] Заборонено спати під час строю | Покарання за порушення: Попередження/Догана</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[1.7.9] У строю заборонено діставати/тримати зброю | Покарання за порушення: Попередження/Догана</p>
+                                <p class="text-sm text-green-400 mt-1">Виняток: напад, наказ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Техніка армії -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-orange-600 to-orange-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m16 0v-4m0 4l-4-4m4 4l-4-4"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">2. Техніка армії</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-orange-400 mb-2">[2.1]</p>
+                        <p class="text-white leading-relaxed">Транспорт використовується лише у службових цілях.</p>
+                        <p class="text-sm text-yellow-400 mt-2">Примітка: тренування, евакуація тощо.</p>
+                        <div class="mt-3 bg-orange-900/20 rounded-lg p-4 border border-orange-700/30">
+                            <p class="font-semibold text-orange-400 mb-2">[2.1.1]</p>
+                            <p class="text-white leading-relaxed">Дозволено використовувати транспорт підрозділам відповідно до їх статутів.</p>
+                        </div>
+                        <div class="mt-3 bg-orange-900/20 rounded-lg p-4 border border-orange-700/30">
+                            <p class="font-semibold text-orange-400 mb-2">[2.1.2]</p>
+                            <p class="text-white leading-relaxed">Техніку армії самостійно дозволено брати зі звання Старшина, а також за наказом Генерала або Полковника.</p>
+                        </div>
+                        <div class="mt-3 bg-orange-900/20 rounded-lg p-4 border border-orange-700/30">
+                            <p class="font-semibold text-orange-400 mb-2">[2.1.3]</p>
+                            <p class="text-white leading-relaxed">Авіацію дозволено брати виключно після здачі Льотної академії Повітряних Сил, здавши на потрібну категорію</p>
+                        </div>
+                        <div class="mt-3 bg-orange-900/20 rounded-lg p-4 border border-orange-700/30">
+                            <p class="font-semibold text-orange-400 mb-2">[2.1.4]</p>
+                            <p class="text-white leading-relaxed">Використання авіації дозволено підрозділам ДШВ та ГУР (Мі-24)</p>
+                            <p class="text-sm text-yellow-400 mt-1">Примітка: Іншим підрозділам дозволено користуватися авіацією лише з дозволу Керівника ДШВ/Куратора ДШВ/Генерала ЗСУ</p>
+                        </div>
+                        <div class="mt-3 bg-orange-900/20 rounded-lg p-4 border border-orange-700/30">
+                            <p class="font-semibold text-orange-400 mb-2">[2.1.5]</p>
+                            <p class="text-white leading-relaxed">Перевезення БК дозволено лише від кількості 3-4 військовослужбовців у супроводі автомобілю.</p>
+                            <p class="text-sm text-red-400 mt-1">Важливо: У разі того, якщо,помічено переслідування колони негайно зробити запит в рацію 10-34 та вказати ваше 10-20.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-orange-400 mb-2">[2.2]</p>
+                        <p class="text-white leading-relaxed">Заборонено:</p>
+                        <div class="mt-3 space-y-2">
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[2.2.1] Брати будь-яку техніку в особистих цілях. |Покарання за порушення: Догана/Звільнення.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[2.2.2] Брати техніку без доповіді. |Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[2.2.3] Брати авіацію без отримання дозволу на її використання, здачі Льотної академії ПС на потрібну категорію. | Покарання за порушення: Попередження/Догана</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[2.2.4] Брати БТР-4 без дозволу начальника ССО, заст.нач. ССО, полковника або генерала. | Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[2.2.5] Порушувати правила ПДР. | Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[2.2.6] Для виїзду в МОЗ використовується СТЗ Део Ланос, Toyota Land Cruiser 100, та Автобус.| Покарання за порушення: Попередження/Догана.</p>
+                                <p class="text-sm text-yellow-400 mt-1">Примітка: Автобус дозволено використовувати лише у випадку якщо на огляд або лікування відбувається виїзд від 5 бійців.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[2.2.7] Заборонено навмисно виводити зладу КРАЗ або топити у воді та залишати за межами ВЧ. | Покарання за порушення: Догана/Звільнення.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[2.2.8] Заборонено залишати військовий транспорт без нагляду або поза територією частини. | Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[2.2.9] Вся техніка армії повинна бути у справному технічному стані та без видимих зовнішніх дефектів.</p>
+                                <p class="text-sm text-yellow-400 mt-1">Покарання: Попередження/Догана + обовʼязковий ремонт техніки(з РП відігровками)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Форма -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">3. Форма</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-cyan-400 mb-2">[3.1]</p>
+                        <p class="text-white leading-relaxed">Прокинувшись (вхід у гру) і приїхавши у частину негайно переодягнутися у військову форму;</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-cyan-400 mb-2">[3.2]</p>
+                        <p class="text-white leading-relaxed">Форма має бути в чистоті! (в Вас повинне бути "фулове" здоров'я)</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-cyan-400 mb-2">[3.3]</p>
+                        <p class="text-white leading-relaxed">Заборонено:</p>
+                        <div class="mt-3 space-y-2">
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[3.3.1] Одягати аксесуари (сумки/капелюшки тощо) | Покарання за порушення: Догана</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[3.3.2] Одягати розпізнавальні знаки визначені статутами підпозділів бійцем, який не перебуває в підрозділі| Покарання за порушення: Попередження/Догана</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[3.3.3] Заборонено перебувати на службі із домашніми улюбленцями. | Покарання за порушення: Догана</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[3.3.4] Заборонено порушувати правила маскування (носити форму іншого підрозділу без наказу, перевдягатися у цивільний одяг під час служби без дозволу).| Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Обов'язки на посту -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">4. Обов'язки на посту</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[4.1]</p>
+                        <p class="text-white leading-relaxed">Бієць зобов'язаний повідомляти про стан на посту, щоразу як заступив.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[4.2]</p>
+                        <p class="text-white leading-relaxed">Нести доблесну службу та відповідати на питання цивільних адекватно. Виявляти повагу до цивільних, та з ким ведеться діалог;</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[4.3]</p>
+                        <p class="text-white leading-relaxed">Бієць зобов'язаний доповідати офіцеру при його появі на посту.</p>
+                        <p class="text-sm text-yellow-400 mt-2">Форма доповіді:</p>
+                        <p class="text-white leading-relaxed mt-2">Пане Генерал/Полковник за час несення варти на посту надзвичайних ситуацій або подій не трапилось! Вартовий [Звання та Призвіще].</p>
+                        <p class="text-sm text-yellow-400 mt-2">Примітка:</p>
+                        <p class="text-white leading-relaxed mt-2">При появі керівництва вартовий зобовʼязаний стати струнко, а потім віддати честь(через анімацію),доповідь обовʼязкова при появі керівництва не залежності від звання та посади , у разі відсутності доповіді покарання: Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[4.4]</p>
+                        <p class="text-white leading-relaxed">Заборонено:</p>
+                        <div class="mt-3 space-y-2">
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[4.4.1] Залишити пост, не попередивши по рації (Покарання за порушення: попередження, догана).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[4.4.2] Спати на посту (AFK) - (Покарання за порушення: догана/Звільнення).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[4.4.3] Стріляти без причини (Покарання за порушення: Попередження/догана).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[4.4.4] Постійно перезаряджати зброю (Покарання за порушення: Попередження). Це правило поширюється на час перебування на ВЧ (не тільки пости).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[4.4.5] На АКПП можна заступати одному зі звання Капрал, здавши статут караульної та гарнізонної служби. (Покарання за порушення: Попередження).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[4.4.6] На КПП можна заступати одному зі звання Старший Солдат, здавши статут караульної та гарнізонної служби. (Покарання за порушення: Попередження).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[4.4.7] На Вежу дозволено заступати одному зі звання Солдат, здавши статут караульної та гарнізонної служби. (Покарання за порушення: Попередження).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[4.4.8] На Бункер дозволено заступати зі звання старший солдат, здавши статут караульної та гарнізонної служби. (Покарання за порушення: Попередження).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[4.4.9] На пост вартовий блок-пост дозволено заступати зі звання сержанта не менше двох осіб, на СТЗ Спартан, здавши статут караульної та гарнізонної служби. (Покарання за порушення: Попередження / Догана)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Територія Армії -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">5. Територія Армії</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-emerald-400 mb-2">[5.1]</p>
+                        <p class="text-white leading-relaxed">Знаходження на території В/Ч зобов'язує особу до підпорядкування Статуту Армії, незалежно від її службового становища.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-emerald-400 mb-2">[5.2]</p>
+                        <p class="text-white leading-relaxed">При виявленні на території сторонніх осіб вивести їх за територію. У разі відмови чи непокори – дозволено застосування кайданок, якщо вона несе для Вас небезпеку - використання зброї.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-emerald-400 mb-2">[5.3]</p>
+                        <p class="text-white leading-relaxed">Будь-який громадянин міста, незалежно від його чину чи соціального статусу, перебуваючи на території АКПП частини, або проїжджаючи через АКПП, на першу вимогу службовця - повинен пред'явити військове посвідчення.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-emerald-400 mb-2">[5.4]</p>
+                        <p class="text-white leading-relaxed">Особисті транспортні засоби паркувати суворо на визначенній парковці.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-emerald-400 mb-2">[5.5]</p>
+                        <p class="text-white leading-relaxed">Прилегла територія ВЧ, місцевість на відстані 15 метрів від паркану вважається територією ВЧ.</p>
+                        <div class="mt-3 bg-emerald-900/20 rounded-lg p-4 border border-emerald-700/30">
+                            <p class="font-semibold text-emerald-400 mb-2">[5.5.1]</p>
+                            <p class="text-white leading-relaxed">Територія АКПП є територією армії й вимагає дотримуватися правил АКПП. (дозволяється тимчасова зупинка за 15 метрів від АКПП, слово тимчасово означає 2-5 хвилин зупинки по справах)</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-emerald-400 mb-2">[5.6]</p>
+                        <p class="text-white leading-relaxed">Для перебування на території армії співробітники державних організацій зобов'язані отримати дозвіл від Керівничого складу.</p>
+                        <p class="text-sm text-yellow-400 mt-2">Примітка: Тільки після схвалення співробітникам державних організацій дозволяється перебувати на території армії.</p>
+                        <p class="text-white leading-relaxed mt-2">Будь-який держ. співробітник зобов'язаний доповідати мету прибуття або від кого отримано дозвіл перебувати на території на прохання будь-якого військовослужбовця.</p>
+                        <div class="mt-3 bg-emerald-900/20 rounded-lg p-4 border border-emerald-700/30">
+                            <p class="font-semibold text-emerald-400 mb-2">[5.6.1]</p>
+                            <p class="text-white leading-relaxed">При навмисному проникненні дозволене використання тайзера, при навмисному проникненні на авто дозволене відкрити вогонь по колесах</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-emerald-400 mb-2">[5.7]</p>
+                        <p class="text-white leading-relaxed">Заборонено:</p>
+                        <div class="mt-3 space-y-2">
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[5.7.1] Виїзд із частини без дозволу керівничого складу (Покарання за порушення: Попередження/Догана).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[5.7.2] Пропускати на територію всіх, за винятком: Військовослужбовців армії (Покарання за порушення: Догана).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[5.7.3] Псувати ОТЗ товаришів по службі та авто державних службовців, що знаходяться на території армії (Покарання за порушення: Догана).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[5.7.4] Їздити на ОТЗ по територію армії крім виїзду з місця паркування або до нього. (Покарання за порушення: Догана).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[5.7.5] Цивільним особам перебувати біля АКПП без причин.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <p class="text-white leading-relaxed">[5.7.6] Особам перебуваючим на території ВЧ за дозволом порушувати армійській статут, порушувати громадський порядок, ображати людей, використовувати фізичну силу, вести відео/фото зйомки</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Військовослужбовцю ЗСУ забороняється -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">6. Військовослужбовцю ЗСУ забороняється</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.1]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється порушувати статут, стройовий статут, статут гарнізонної та вартової служби. |Покарання порушення: Попередження/Догана/Звільнення|</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.2]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється допускати прояви насильства, псування майна та приниження особистостей. | Покарання за порушення: Попередження / Догана /Звільнення|</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.3]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється не слухати накази старшого за званням. | Покарання за порушення: Попередження / Догана|</p>
+                        <p class="text-sm text-green-400 mt-2">Виняток: якщо накази порушують статут/закони тощо</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.4]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється використовувати службові транспортні засоби в особистих цілях. | Покарання за порушення: Попередження / Догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.5]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється користуватися особистим транспортним засобом за формою. (Виняток: зареєстровані ОТЗ ГУР, ВСП, ССО та гвинтокрили для ДШВ) | Покарання за порушення: Попередження / Догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.6]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється порушувати субординацію під час спілкування з цивільними особами, військовослужбовцям та співробітниками інших держ. структур. | Покарання за порушення: Попередження / Догана /Звільнення|</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.7]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється пропускати громадян на розташування частини, без причини. | Покарання за порушення: Попередження / Догана / Звільнення |</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.8]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється залишати зміну у робочий час, перебувати у місцях розваг без отримання: відгулу, дозвіл генерала, полковника. | Покарання за порушення: Догана /Звільнення|</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.9]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється використовувати табельну зброю/тайзер без причини. Покарання за порушення: Попередження / Догана</p>
+                        <div class="mt-3 bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="font-semibold text-red-400 mb-2">[6.9.1]</p>
+                            <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється самостійно брати ракетну установку (PРГ) | Покарання за порушення: Звільнення + ЧС МО 3 місяці.</p>
+                            <p class="text-sm text-green-400 mt-2">Примітка: Дозволено брати РПГ лише для виконання спец.завдань та захисту ВЧ, виключно з дозволу Генерала/Полковника.</p>
+                        </div>
+                        <div class="mt-3 bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="font-semibold text-red-400 mb-2">[6.9.2]</p>
+                            <p class="text-white leading-relaxed">FPV дрони дозволено брати/ використовувати лише для виконання завдань</p>
+                            <p class="text-sm text-yellow-400 mt-2">Примітка: Погодивши заздалегідь з вищим керівництвом</p>
+                            <p class="text-sm text-yellow-400 mt-2">Покарання: Догана</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.10]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється допускати та супроводжувати дезертирство. | Покарання за порушення: Звільнення|</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.11]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії заборонено обговорювати в поганому світлі та принижувати честь Армії перебуваючи як на зміні, так і поза зміною. | Покарання за порушення: Попередження / Догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.12]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії заборонено використовувати рацію в особистих цілях, а також передавати будь-яку інформацію третім особам. | Покарання за порушення: Попередження / Догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.13]</p>
+                        <p class="text-white leading-relaxed">Заборонено мати будь-який зв'язок (контакти) з неофіційними організаціями. Виняток: ГУР (службова необхідність).| Покарання за порушення: Догана /Звільнення.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.14]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії заборонено поширювати військові таємниці, стратегічні завдання та загалом становище служби. | Покарання за порушення: Попередження / Догана /Звільнення|</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.15]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється бігати без форми по ВЧ. | Покарання за порушення: Попередження / Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.16]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється не з'являтися на побудову. (Виняток: Відгул) | Покарання за порушення: Попередження / Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.17]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється задавати безглузді запитання/запитання, які можна задати людині посадою нижче (до Генерала та полковників звертатися тільки у крайніх випадках) | Покарання за порушення: Попередження.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.18]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється залазити на будь які криші казарм також ангарів| Покарання за порушення: Попередження / Догана.</p>
+                        <p class="text-sm text-green-400 mt-2">Виняток: Відбиття нападу на ВЧ.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.19]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється не перебувати в спец.зв'язку,це є обов'язковим для кожного військовослужбовця | Покарання за порушення: Попередження / Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.20]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовцю Армії забороняється надягати кайданки на бійців/громадян без причини. |Покарання за порушення: Попередження/Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.21]</p>
+                        <p class="text-white leading-relaxed">Не приходити на роботу або не виконувати обов'язки більше 7 діб без затвердженого рапорту на відпустку | Покарання за порушення: звільнення).</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.22]</p>
+                        <p class="text-white leading-relaxed">Заборонено вводити в оману керівництво ЗСУ. | Покарання за порушення: Догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.23]</p>
+                        <p class="text-white leading-relaxed">Заборонено бігати/їздити по плацу | Покарання за порушення: Попередження/Догана.</p>
+                        <p class="text-sm text-green-400 mt-2">Виняток: Дозволено бігати/їздити по плацу під час код-3 або код-4</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.24]</p>
+                        <p class="text-white leading-relaxed">Заборонено звільнятись по причині "За власним бажанням", "Перевод", якщо маються догани, звільняється з причиною "Порушення статуту 6.24".</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.25]</p>
+                        <p class="text-white leading-relaxed">Заборонено залишати військовий транспорт без нагляду або поза територією частини. | Покарання за порушення: Попередження/Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.26]</p>
+                        <p class="text-white leading-relaxed">Заборонено втручатися в чужу розмову і перебивати старших за званням. | Покарання за порушення: Попередження.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.27]</p>
+                        <p class="text-white leading-relaxed">Заборонено виконувати завдання "Перевезення вантажу", "Несення варти", "Наряд на АКПП", | Покарання за порушення: Попередження/Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.28]</p>
+                        <p class="text-white leading-relaxed">Заборонено вступати у словесні конфлікти або принижувати співслужбовців у спец.зв'язках (( голосових каналах чи чатах )).| Покарання за порушення: Попередження/Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.29]</p>
+                        <p class="text-white leading-relaxed">Заборонено відмовлятися від участі у тренуваннях, бойових завданнях чи навчаннях без поважної причини.| Покарання за порушення: Попередження/Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.30]</p>
+                        <p class="text-white leading-relaxed">Заборонено прохати про підвищення та вимагати перевірку рапорту за межами строю. | Покарання за порушення: Попередження/Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.31]</p>
+                        <p class="text-white leading-relaxed">Заборонено в період відпустки з'являтися на території ВЧ без вагомої причини. | Покарання за порушення: Попередження/Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.32]</p>
+                        <p class="text-white leading-relaxed">Заборонено мати помилки в документах | Покарання: звільнення</p>
+                        <p class="text-sm text-yellow-400 mt-2">Примітка: НонРП ніки; ніки написані рос.мовою тощо</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-red-400 mb-2">[6.33]</p>
+                        <p class="text-white leading-relaxed">При отримані 2/3 доган йде пониження в званні.</p>
+                        <p class="text-sm text-green-400 mt-2">Виключення: Працівник, який перебуває на першому званні та має дві з трьох можливих доган, не підлягає звільненню і залишається на своєму званні.</p>
+                        <p class="text-sm text-green-400 mt-2">Виключення: Старший особовий склад понижається на розсуд лідера.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Військовослужбовець Армії зобов'язаний -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">7. Військовослужбовець Армії зобов'язаний</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-green-400 mb-2">[7.1]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовець Армії зобов'язується чесно, відповідально та доблесно нести службу своїй Батьківщині.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-green-400 mb-2">[7.2]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовець Армії зобов'язується дотримуватися субординації, статут свого підрозділу, загальновійськовий статут, стройовий статут.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-green-400 mb-2">[7.3]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовець Армії зобов'язується охороняти розташування частини за будь-яку ціну.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-green-400 mb-2">[7.4]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовець Армії зобов'язується виконувати накази Керівництва Армії за будь-яку ціну. (Генерала, Полковника)</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-green-400 mb-2">[7.5]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовець Армії зобов'язується дотримуватися правил дорожнього руху, якщо він перебуває на патрулюванні міста.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-green-400 mb-2">[7.6]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовці Армії, відповідно до статутів підрозділів, а також начальник підрозділу або його заступник, старший склад - підполковник та майор зобовʼязані щотижня доповідати про виконану роботу. (Подавати щотижневий звіт у відповідний розділ)| Покарання за порушення: Догана.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-green-400 mb-2">[7.7]</p>
+                        <p class="text-white leading-relaxed">Військовослужбовець Армії зобов'язується під час Обідньої Перерви та після або до Робочої Зміни, прибути на код-5, код-6 при наказі Генерала</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Правила використання рації -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">8. Правила використання рації</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-purple-400 mb-2">[8.1]</p>
+                        <p class="text-white leading-relaxed">Спілкуватися за рацією можна лише виключно у службових цілях. | Покарання за порушення: Попередження / Догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-purple-400 mb-2">[8.2]</p>
+                        <p class="text-white leading-relaxed">Заборонено створення будь-яких прізвиськ, "кличок", "поганяв". | Покарання за порушення: Попередження / Догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-purple-400 mb-2">[8.3]</p>
+                        <p class="text-white leading-relaxed">Забороняється порушувати субординацію та ієрархію ЗСУ. | Покарання за порушення: Попередження / Догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-purple-400 mb-2">[8.4]</p>
+                        <p class="text-white leading-relaxed">При спілкуванні у рації ненормативна лексика неприпустима. | Покарання за порушення: Попередження / Догана</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-purple-400 mb-2">[8.5]</p>
+                        <p class="text-white leading-relaxed">Забороняється нести маячню в рацію, а також інші прояви неадекватної поведінки, МГ шити. | Покарання за порушення: Попередження / Догана /Звільнення</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-purple-400 mb-2">[8.6]</p>
+                        <p class="text-white leading-relaxed">Загальну рацію дозволяється використовувати зі звання: "Сержант" та вище. | Покарання за порушення: Попередження / Догана</p>
+                        <div class="mt-3 bg-purple-900/20 rounded-lg p-4 border border-purple-700/30">
+                            <p class="font-semibold text-purple-400 mb-2">[8.6.1]</p>
+                            <p class="text-white leading-relaxed">Використання голосової міжфракційної рації дозволено зі звання: "Сержант" та вище у разі потреби 10-34 від інших державних структур та у випадку вирішення критичних питань або ситуацій. | Покарання за порушення: Попередження / Догана</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-purple-400 mb-2">[8.7]</p>
+                        <p class="text-white leading-relaxed">Кожен військовослужбовець Армії має писати свій тег. Приклади тегів: [ВСП] [ГУР] [НК] [ССО] [ДШВ] [ВМС]. | Покарання за порушення: Попередження / Догана</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Блокпости -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">9. Блокпости</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[9.1]</p>
+                        <p class="text-white leading-relaxed">Блокпост — дорожній укріплений контрольно-пропускний пункт із озброєною охороною, здатний самостійно тримати кругову оборону. Блокпост встановлюється на в'їзді/виїзді на територію/з території, де введено воєнний стан та запроваджено комендантську годину.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[9.2]</p>
+                        <p class="text-white leading-relaxed">На блокпост можна виїзджати зі звання Старший солдат.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[9.3]</p>
+                        <p class="text-white leading-relaxed">На блокпосту заборонено перевіряти робочих (Таксі, Дальнобійники, УкрПошта)</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[9.4]</p>
+                        <p class="text-white leading-relaxed">Під час стояння на блокпосту діють усі правила та обов'язки вартових, статут гарнізоної та вартової служб.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[9.5]</p>
+                        <p class="text-white leading-relaxed">На блокпості заборонено розстрілювати людей. | Покарання за порушення - догана/звільнення.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[9.6]</p>
+                        <p class="text-white leading-relaxed">Якщо громадянин порушив правила блокпосту (проїхав без зупинки та показу документів) можна відкрити вогонь.</p>
+                        <p class="text-sm text-green-400 mt-2">Примітка: тільки по колесах</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[9.7]</p>
+                        <p class="text-white leading-relaxed">Якщо громадянин не показує документи або говорить, що забув їх вдома - затримуєте його, викликаєте НПУ або СБУ.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-amber-400 mb-2">[9.8]</p>
+                        <p class="text-white leading-relaxed">Виїзд на блокпост здійснюється за команди генерала або полковника, або з їх дозволу.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Система підвищення ССО -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">10. Система підвищення ССО</h2>
+                </div>
+                <div class="space-y-6 text-gray-300">
+                    <!-- Капрал - Сержант -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-blue-400 mb-4 text-xl">Капрал [4] - Сержант [5]</h3>
+                        <ul class="space-y-2 text-white leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати завдання "Наряд на АКПП" 2 рази;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Несення варти на бункері: 2 рази по 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Несення варти на Вежі: 2 рази по 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Патруль навколо ВЧ: 2 раз - 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати завдання "Морське патрулювання" 1 раз;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Участь у тренуванні: 3 рази (для бійця). Для офіцера та вище - провести 5 тренувань;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Допомога на наборі або виїзд на БП: 1 раз.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Сержант - Старшина -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-blue-400 mb-4 text-xl">Сержант [5] - Старшина [6]</h3>
+                        <ul class="space-y-2 text-white leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Допомога на наборі або виїзд на БП: 2 рази;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Несення варти на бункері: 3 раз по 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Патруль навколо ВЧ: 2 рази по 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Патруль по містам: 2 раз - 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати завдання "Наряд на АКПП" 2 рази;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати завдання "Морське патрулювання" 2 рази;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Участь у РП-тренуваннях/школіннях: 5 раз (для бійця). Для офіцера та вище - Провести 4 РП-тренування/школіння;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати 1 Спец.завдання.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Старшина - Лейтенант -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-blue-400 mb-4 text-xl">Старшина [6] - Лейтенант [7]</h3>
+                        <ul class="space-y-2 text-white leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Допомога на наборі або виїзд на БП: 3 рази;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Несення варти на бункері: 3 раз по 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати завдання "Морське патрулювання" 2 рази;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати 1 Спец.Завдання;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Патруль навколо ВЧ: 3 рази по 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Патруль по містам: 3 раз - 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати завдання "Наряд на АКПП" 4 рази;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Привезти 150 Ящиків БК (рахується вся к-сть розгружена на ВЧ);</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Взяти участь у тренуваннях 4 рази. Для офіцера та вище - Провести 6 тренувань;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Прослухати 3 лекції. Для офіцера та вище - провести 5 лекцій.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Лейтенант - Капітан -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-blue-400 mb-4 text-xl">Лейтенант [7] - Капітан [8]</h3>
+                        <ul class="space-y-2 text-white leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Мати посаду офіцера, або вище;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Допомоги на наборі або виїзд на БП: 4 раз;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Несення варти на бункері: 3 раз по 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати завдання "Морське патрулювання" 2 рази;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Провести 8 тренувань та 6 лекцій;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Патруль навколо ВЧ (Спартан або Toyota Hilux): 4 раз по 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Патруль міста: 3 раз - 20 хв.;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Виконати завдання "Наряд на АКПП" 5 разів;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Привезти 200 Ящиків БК (рахується вся к-сть розгружена на ВЧ);</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>1 спец. Завдання;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-400 mr-2">•</span>
+                                <span>Повторно здати Статут і правила ССО.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Графік роботи -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">11. Графік роботи</h2>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-teal-400 mb-3">Тижневий розклад робочого дня за ігровим часом (Київ):</h3>
+                        <ul class="space-y-2 text-white leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-teal-400 mr-2">•</span>
+                                <span>Понеділок з 10:00 до 21:00</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-400 mr-2">•</span>
+                                <span>Вівторок з 10:00 до 21:00</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-400 mr-2">•</span>
+                                <span>Середа з 10:00 до 21:00</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-400 mr-2">•</span>
+                                <span>Четвер з 10:00 до 21:00</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-400 mr-2">•</span>
+                                <span>П'ятниця з 10:00 до 21:00</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-400 mr-2">•</span>
+                                <span>Субота з 11:00 до 20:00</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-400 mr-2">•</span>
+                                <span>Неділя - ВИХІДНИЙ</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="font-semibold text-teal-400 mb-2">Обідня перерва для держ.організацій: з 13:00 до 14:00.</p>
+                    </div>
+
+                    <div class="bg-emerald-900/20 rounded-xl p-5 border border-emerald-700/30">
+                        <h3 class="font-semibold text-emerald-400 mb-3">Після робочої зміни та під час обідньої перерви дозволено:</h3>
+                        <ul class="space-y-2 text-white leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-emerald-400 mr-2">✓</span>
+                                <span>Перебувати в особистому транспорті у робочій формі.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-emerald-400 mr-2">✓</span>
+                                <span>Займатися своїми справами у цивільному одязі (виняток: наявність догани).</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-red-900/20 rounded-xl p-5 border border-red-700/30">
+                        <h3 class="font-semibold text-red-400 mb-3">Під час робочої зміни заборонено:</h3>
+                        <ul class="space-y-2 text-white leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">✗</span>
+                                <span>Знаходитися у казино/БУ ринку у робочій формі.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">✗</span>
+                                <span>Самовільно покидати військову частину.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">✗</span>
+                                <span>Не виконувати свої службові обов'язки.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">✗</span>
+                                <span>Видавати відпустку на обідню перерву (тобто на годину та півгодини).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Коди та тен-коди ЗСУ -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">12. Коди та тен-коди ЗСУ</h2>
+                </div>
+                <div class="space-y-6 text-gray-300">
+                    <!-- 1. Загальні положення -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-indigo-400 mb-4 text-xl">1. Загальні положення</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <p class="font-semibold text-indigo-300">Коди в ЗСУ:</p>
+                            <p>Коди — це умовні слова, числа або сигнали, які використовуються у Збройних Силах України для передачі інформації в скороченому та захищеному вигляді.</p>
+                            <p class="font-semibold text-indigo-300 mt-4">Вони потрібні для того, щоб:</p>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li>не передавати відкритий зміст повідомлень;</li>
+                                <li>ускладнити розуміння інформації сторонніми;</li>
+                                <li>прискорити обмін інформацією;</li>
+                                <li>зменшити ризик помилок під час зв'язку.</li>
+                            </ul>
+                            <p class="font-semibold text-indigo-300 mt-4">Коди можуть використовуватись:</p>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li>під час радіообміну;</li>
+                                <li>у документах;</li>
+                                <li>при усних доповідях.</li>
+                            </ul>
+                            <p class="font-semibold text-indigo-300 mt-4">ТЕН-коди (TAN-коди):</p>
+                            <p>ТЕН-коди — це одноразові або обмеженої дії кодові позначення, які застосовуються для підтвердження справжності наказу, команди або повідомлення.</p>
+                            <p>ТЕН-код підтверджує, що команда або наказ є справжніми і подані уповноваженою особою.</p>
+                            <p class="font-semibold text-indigo-300 mt-4">ТЕН-коди використовують, щоб:</p>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li>запобігти передачі фальшивих команд;</li>
+                                <li>захистити управління військами;</li>
+                                <li>виключити дії противника через підробні сигнали;</li>
+                                <li>підтвердити право на виконання певних дій.</li>
+                            </ul>
+                            <p class="font-semibold text-indigo-300 mt-4">Загальні особливості ТЕН-кодів:</p>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li>мають обмежений термін дії;</li>
+                                <li>зберігаються та використовуються за встановленими правилами;</li>
+                                <li>після використання вважаються недійсними;</li>
+                                <li>передаються лише визначеним посадовим особам.</li>
+                            </ul>
+                            <div class="bg-yellow-900/20 rounded-lg p-4 border border-yellow-700/30 mt-4">
+                                <p class="font-semibold text-yellow-400 mb-2">Важливість кодів і ТЕН-кодів</p>
+                                <p>Використання кодів і ТЕН-кодів є елементом військової дисципліни, захисту інформації та безпеки управління військами.</p>
+                                <p>Неправильне або несанкціоноване використання таких кодів може призвести до серйозних наслідків, тому вони регламентуються статутами та наказами!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Коди -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-indigo-400 mb-4 text-xl">2. Коди</h3>
+                        <div class="space-y-2 text-white leading-relaxed">
+                            <div class="flex items-center bg-blue-900/20 rounded-lg p-3 border border-blue-700/30">
+                                <span class="font-semibold text-blue-400 mr-3">КОД 1</span>
+                                <span>- Стабільний стан</span>
+                            </div>
+                            <div class="flex items-center bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
+                                <span class="font-semibold text-orange-400 mr-3">КОД 2</span>
+                                <span>- Підозріла людина на КПП</span>
+                            </div>
+                            <div class="flex items-center bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <span class="font-semibold text-red-400 mr-3">КОД 3</span>
+                                <span>- Тривога на ВЧ (всі події на ВЧ)</span>
+                            </div>
+                            <div class="flex items-center bg-purple-900/20 rounded-lg p-3 border border-purple-700/30">
+                                <span class="font-semibold text-purple-400 mr-3">КОД 4</span>
+                                <span>- Військовий стан</span>
+                            </div>
+                            <div class="flex items-start bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="font-semibold text-green-400 mr-3">КОД 5</span>
+                                <span>- Побудова на плацу</span>
+                            </div>
+                            <div class="flex items-start bg-teal-900/20 rounded-lg p-3 border border-teal-700/30">
+                                <span class="font-semibold text-teal-400 mr-3">КОД 6</span>
+                                <span>- Побудова на плацу старшого складу, усіх начальників та полковників</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Тен-коди -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-indigo-400 mb-4 text-xl">3. Тен-коди</h3>
+                        <div class="space-y-2 text-white leading-relaxed">
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="font-semibold text-green-400 mr-3">КОД 10-4</span>
+                                <span>- Прийнято!</span>
+                            </div>
+                            <div class="flex items-center bg-yellow-900/20 rounded-lg p-3 border border-yellow-700/30">
+                                <span class="font-semibold text-yellow-400 mr-3">КОД 10-9</span>
+                                <span>- Повторіть!</span>
+                            </div>
+                            <div class="flex items-center bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <span class="font-semibold text-red-400 mr-3">КОД 10-10</span>
+                                <span>- Заперечення/немає можливості.</span>
+                            </div>
+                            <div class="flex items-center bg-blue-900/20 rounded-lg p-3 border border-blue-700/30">
+                                <span class="font-semibold text-blue-400 mr-3">КОД 10-20</span>
+                                <span>- Розташування (наприклад: "Моє 10-20 військкомат" або "Ваше 10-20?").</span>
+                            </div>
+                            <div class="flex items-center bg-red-900/20 rounded-lg p-3 border border-red-700/30">
+                                <span class="font-semibold text-red-400 mr-3">КОД 10-34</span>
+                                <span>- Потрібна допомога!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Коди позначення стану бійця -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-indigo-400 mb-4 text-xl">4. Коди позначення стану бійця</h3>
+                        <div class="space-y-2 text-white leading-relaxed">
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="font-semibold text-green-400 mr-3">100</span>
+                                <span>- здоровий бієць</span>
+                            </div>
+                            <div class="flex items-center bg-gray-900/20 rounded-lg p-3 border border-gray-700/30">
+                                <span class="font-semibold text-gray-400 mr-3">200</span>
+                                <span>- мертвий бієць</span>
+                            </div>
+                            <div class="flex items-center bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
+                                <span class="font-semibold text-orange-400 mr-3">300</span>
+                                <span>- поранений бієць</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Приклад застосування кодів -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-indigo-400 mb-4 text-xl">5. Приклад застосування кодів</h3>
+                        <div class="space-y-3 text-white leading-relaxed">
+                            <div class="bg-indigo-900/20 rounded-lg p-4 border border-indigo-700/30">
+                                <p class="font-semibold text-indigo-300 mb-2">Приклад 1:</p>
+                                <p>АКПП КОД-3 - один бієць.</p>
+                                <p>Приклад: 10-4 - другий бієць.</p>
+                            </div>
+                            <div class="bg-indigo-900/20 rounded-lg p-4 border border-indigo-700/30">
+                                <p class="font-semibold text-indigo-300 mb-2">Приклад 2:</p>
+                                <p>Пане Лізейник ваше 10-20?</p>
+                                <p>Приклад: Моє 10-20 шостий плац.</p>
+                            </div>
+                            <div class="bg-indigo-900/20 rounded-lg p-4 border border-indigo-700/30">
+                                <p class="font-semibold text-indigo-300 mb-2">Приклад 3:</p>
+                                <p>Я 300-ий, ранена нижня права кінцівка! 10-34, 10-20 верф</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. Стройовий статут -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">13. Стройовий статут</h2>
+                </div>
+                <div class="space-y-6 text-gray-300">
+                    <!-- 1. Загальні положення -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-purple-400 mb-4 text-xl">1. Загальні положення</h3>
+                        <p class="font-semibold text-purple-300 mb-4">Строї та управління ними:</p>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.1]</p>
+                                <p>Стрій - визначене Стройовим статутом Збройних Сил України розміщення військовослужбовців, підрозділів і частин для їх спільних дій у пішому порядку та/або на машинах.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.2]</p>
+                                <p>Шеренга - стрій, у якому військовослужбовці розміщені один біля одного на одній лінії.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.3]</p>
+                                <p>Лінія машин - стрій, у якому машини розміщені на одній лінії одна біля одної.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.4]</p>
+                                <p>Фланг - правий (лівий) край строю. Під час поворотів строю назви флангів не змінюються.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.5]</p>
+                                <p>Фронт - бік строю, до якого військовослужбовці повернені обличчям, а машини - лобовою частиною.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.6]</p>
+                                <p>Тильний бік строю - бік, протилежний фронту.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.7]</p>
+                                <p>Колона - стрій, у якому військовослужбовці або підрозділи (машини) розміщені один (одна) за одним (одною) на дистанціях, установлених цим Статутом або командиром. Колони можуть бути вишикувані по одному, по два, по три, по чотири та більше військовослужбовців. Колони застосовуються для шикування військовослужбовців, підрозділів і частин у розгорнутий або похідний стрій.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.8]</p>
+                                <p>Напрямний - військовослужбовець (підрозділ, машина), що рухається на чолі строю у визначеному напрямку. За напрямним має переміщуватися решта військовослужбовців (підрозділів, машин). Замикаючий - військовослужбовець (підрозділ, машина), який рухається останнім у колоні.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.9]</p>
+                                <p>Управління строєм здійснюється командами та розпорядженнями, які подає командир голосом, сигналами та особистим прикладом і які передаються за допомогою технічних і рухових засобів. Команди та розпорядження можуть передаватися колоною через командирів підрозділів (старших машин) і спостерігачів. У строю старший командир перебуває там, звідки йому зручніше командувати. Інші командири здійснюють управління, залишаючись на місцях, установлених цим Статутом або старшим командиром. Командирам підрозділів від роти і вище в похідному строю батальйону та полку дозволяється виходити із строю лише для подання команд і перевірки їх виконання. Управління в машині здійснюється командами та розпорядженнями, які подаються голосом і з допомогою засобів внутрішнього зв'язку. Підготовча команда подається чітко (виразно), гучно і протяжно, щоб військовослужбовці зрозуміли, яких дій вимагає від них командир. За підготовчою командою військовослужбовці, які перебувають в строю, приймають стройове положення, під час руху переходять на стройовий крок, а поза строєм повертаються в бік начальника й приймають стройове положення. Виконавча команда (далі друкується великими літерами) подається після паузи гучно, уривчасто і чітко. Така команда здійснюється негайно і точно. З метою привернути увагу підрозділу або окремого військовослужбовця в підготовчій команді, у разі потреби, називається підрозділ або війське звання військовослужбовця. Наприклад: "Взвод (3-й взвод) - СТІЙ"; "Солдат Левченко, кру-ГОМ". Гучність голосу під час подання команди змінюється залежно від ширини і глибини строю, рапорт віддається чітко, без різкого підвищення голосу.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.10]</p>
+                                <p>Сигнали для управління строєм та управління машиною зазначені в додатках 1 і 2 до цього Статуту. У разі потреби командир підрозділу (частини) призначає додаткові сигнали для управління строєм.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.11]</p>
+                                <p>Команди (сигнали), які стосуються усіх підрозділів, приймаються негайно і виконуються всіма командирами підрозділів, командирами і старшими машин. Під час подання команди сигналом попередньо подається сигнал "УВАГА", а якщо команда стосується тільки одного з підрозділів, то подається сигнал, який стосується цього підрозділу. Відповідні сигнали, що позначають підрозділи, встановлюються командиром частини (підрозділу). Готовність до прийняття команди сигналом також позначається сигналом "УВАГА". Прийняття сигналу підтверджується його повторенням або поданням відповідного сигналу своєму підрозділові.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.12]</p>
+                                <p>Щоб припинити виконання прийому, подається команда "ВІДСТАВИТИ". За цією командою приймається положення, яке було до виконання прийому.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.13]</p>
+                                <p>Під час навчання допускається виконання зазначених у цьому Статуті стройових прийомів і рухів за розподілом, а також з допомогою підготовчих вправ, наприклад: "Автомат на груди, за розподілом: роби - РАЗ, роби - ДВА, роби - ТРИ"; "Праворуч, за розподілом: роби - РАЗ, роби - ДВА". Для участі в парадах, а також в інших випадках підрозділ за наказом командира може шикуватися в загальну колону по три, по чотири та більше. При цьому шикування проводиться, як правило, за зростом (ранжиром).</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.14]</p>
+                                <p>Командир зобов'язаний: визначити місце, час, порядок шикування, форму одягу та спорядження, а також озброєння і техніку; у разі потреби призначати спостерігача; перевіряти й знати наявність у строю підлеглих свого підрозділу (підрозділів, частини), озброєння, техніки, боєприпасів, засобів індивідуального захисту та шанцевого інструменту; перевіряти зовнішній вигляд підлеглих, а також наявність спорядження і правильність його припасування; підтримувати дисципліну в строю і вимагати точного виконання підрозділами команд і сигналів, а військовослужбовцями - своїх обов'язків у строю; під час подання команд у пішому строю приймати стройове положення; проводити зовнішній огляд озброєння і техніки, якщо підрозділи шикуються з нею; перевіряти наявність і справність обладнання для перевезення особового складу, а також правильність кріплення матеріальної частини, що перевозиться; нагадувати особовому складові заходи безпеки; під час руху додержуватися визначених дистанцій, швидкості та правил руху.</p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="font-semibold text-purple-400 mb-2">[1.15]</p>
+                                <p>Військовослужбовець зобов'язаний: перевіряти справність своєї зброї, закріплених за ним озброєння й техніки, боєприпасів, засобів індивідуального захисту, шанцевого інструменту, обмундирування та спорядження; мати коротку охайну зачіску; охайно заправляти обмундирування, правильно надівати та припасовувати спорядження, допомагати товаришеві усувати помічені недоліки; знати своє місце в строю, ставати до строю швидко, без метушні; під час руху зберігати рівняння, інтервал і дистанцію; не виходити із строю (машини) без дозволу; у строю без дозволу не розмовляти, додержуватися цілковитої тиші; бути уважним до наказів (розпоряджень) і команд (сигналів) свого командира, виконувати їх швидко й точно, не заважаючи іншим; передавати накази (розпорядження), команди (сигнали) без перекручень, гучно й чітко. Ставати у клітинку в 2 колони яка визначена цим статутом.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Заборони під час шикування -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-red-400 mb-4 text-xl">2. Заборони під час шикування</h3>
+                        <div class="space-y-3 text-white leading-relaxed">
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.1]</p>
+                                <p>Знаходитись у нетверезому стані. | Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.2]</p>
+                                <p>Використовувати будь-які анімації. | Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.3]</p>
+                                <p>Розмовляти в строю, писати в IC чат. | Покарання за порушення: Попередження/Гауптвахта/Догана.</p>
+                                <p class="text-sm text-yellow-400 mt-2">Примітка: в OOC спілкуватись можна, але під час строю не зловживати (спамити тощо).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.4]</p>
+                                <p>Постійно запитувати, "Чому?" "А що буде?" "А скоро?". | Покарання за порушення: Попередження.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.5]</p>
+                                <p>Правила вище стосуються також побудови для заходів (у цивільному одязі).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.6]</p>
+                                <p>Військовослужбовець ЗСУ зобов'язаний в форменому одязі спілкуватися з громадянами державною мовою.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.7]</p>
+                                <p>Під час КОДу-5 заборонено користуватись телефоном (дзвонити, гратися). | Покарання за порушення: Попередження/Догана.</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.8]</p>
+                                <p>Якщо співробітник досяг 3/3 доган, звільняється з причиною "Порушення статуту 1.7.8".</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.9]</p>
+                                <p>Заборонено спати під час строю ((Стояти в AFK).</p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                                <p class="font-semibold text-red-400 mb-2">[2.10]</p>
+                                <p>У строю заборонено діставати/тримати зброю.</p>
+                                <p class="text-sm text-green-400 mt-2">Виняток: напад, наказ.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Примітки -->
+                    <div class="bg-yellow-900/20 rounded-xl p-5 border border-yellow-700/30">
+                        <h3 class="font-semibold text-yellow-400 mb-4 text-xl">Примітки</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <p>Начальники та Заступник Начальника стають перед своїм підрозділом.</p>
+                            <p>Шикування відбувається на 1 плацу від АКПП!</p>
+                            
+                            <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700/30 mt-4">
+                                <p class="font-semibold text-purple-400 mb-3">Розподіл по клітинках:</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>ССО - 1 клітинка</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>ГУР - 2 клітинка</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>ВСП - 3 клітинка</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>НК - 4 клітинка</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>ДШВ - 5 клітинка</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700/30 mt-4">
+                                <p class="font-semibold text-purple-400 mb-3">Схема розміщення підрозділів по клітинках:</p>
+                                <img src="https://i.ibb.co/mFtbXz00/1766605135381.png" alt="Схема розміщення підрозділів" class="w-full max-w-2xl mx-auto rounded-lg border border-slate-600">
+                            </div>
+                            
+                            <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700/30 mt-4">
+                                <p class="font-semibold text-purple-400 mb-3">Розподіл плаців:</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>1 плац - Проведення загальних Код-5</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>2 плац - для ССО</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>3 плац - для ГУР</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>4 плац - для ВСП</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>5 плац - для НК</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>6 плац - для ДШВ</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-purple-400 mr-2">•</span>
+                                        <span>8 плац - проведення загальних тренувань, лекцій та прийняття іспитів</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700/30 mt-4">
+                                <p class="font-semibold text-purple-400 mb-3">Схема розміщення підрозділів по плацам:</p>
+                                <img src="https://i.ibb.co/ksR7H5HL/1766605195513.png" alt="Схема розміщення підрозділів по плацам" class="w-full max-w-2xl mx-auto rounded-lg border border-slate-600">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. Положення про Субординацію -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">14. Положення про Субординацію</h2>
+                </div>
+                <div class="space-y-6 text-gray-300">
+                    <!-- Загальні положення -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-teal-400 mb-4 text-xl">Загальні положення</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <p>Субординація серед військовослужбовців ґрунтується на багатовікових традиціях. У їх число входить беззаперечне підпорядкування службовців своєму командиру.</p>
+                            <p>Звання і класні чини військовослужбовців відображаються на їх обмундируванні. Розуміння знаків розрізнення дозволяє військовослужбовцям різних звань вітати один одного відповідним чином і віддавати їм шану у відповідно до статуту військової служби.</p>
+                            <p class="font-semibold text-teal-300 mt-4">Субординація - це правила спілкування та взаємодії між військовослужбовцями, що визначають порядок звернення та поведінки під час розмови.</p>
+                            <div class="bg-yellow-900/20 rounded-lg p-4 border border-yellow-700/30 mt-4">
+                                <p class="font-semibold text-yellow-400 mb-2">Важливість субординації</p>
+                                <p>Без субординації в армії настав би повний хаос.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Основні положення -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-teal-400 mb-4 text-xl">Основні положення армійської службової субординації</h3>
+                        <div class="space-y-3 text-white leading-relaxed">
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="flex items-start">
+                                    <span class="text-teal-400 mr-3 mt-1">•</span>
+                                    <span>Молодший за званням беззаперечно підпорядковується старшому і виконує всі його команди.</span>
+                                </p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="flex items-start">
+                                    <span class="text-teal-400 mr-3 mt-1">•</span>
+                                    <span>Як тільки наказ або завдання старшого за званням виконується, про це необхідно негайно доповісти командуванню.</span>
+                                </p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="flex items-start">
+                                    <span class="text-teal-400 mr-3 mt-1">•</span>
+                                    <span>Невиконання наказу старшого за званням може спричинити за собою відповідальність аж до кримінальної.</span>
+                                </p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="flex items-start">
+                                    <span class="text-teal-400 mr-3 mt-1">•</span>
+                                    <span>Всі військовослужбовці повинні чітко дотримуватися правил, описаних в армійському статуті і існуючим армійським традиціям.</span>
+                                </p>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700/30">
+                                <p class="flex items-start">
+                                    <span class="text-teal-400 mr-3 mt-1">•</span>
+                                    <span>Військовослужбовці повинні виконувати команди старшого за званням і ритуал вітання.</span>
+                                </p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30 mt-4">
+                                <p class="font-semibold text-red-400 mb-2">Порушення субординації</p>
+                                <p>Порушення субординації в армії тягнуть за собою дисциплінарні стягнення.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Приклади звернення -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-teal-400 mb-4 text-xl">Приклади звернення</h3>
+                        <div class="space-y-3 text-white leading-relaxed">
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="text-red-400 mr-3">✗</span>
+                                <span class="mr-4">"Здрастуйте"</span>
+                                <span class="text-teal-400">→</span>
+                                <span class="ml-4 text-green-400">"Здоров'я Бажаю"</span>
+                            </div>
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="text-red-400 mr-3">✗</span>
+                                <span class="mr-4">"Так"</span>
+                                <span class="text-teal-400">→</span>
+                                <span class="ml-4 text-green-400">"Так точно", "Саме так", "Плюс" (під час тренування, спец операцій)</span>
+                            </div>
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="text-red-400 mr-3">✗</span>
+                                <span class="mr-4">"Ні"</span>
+                                <span class="text-teal-400">→</span>
+                                <span class="ml-4 text-green-400">"Ніяк ні"</span>
+                            </div>
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="text-red-400 mr-3">✗</span>
+                                <span class="mr-4">"Можна"</span>
+                                <span class="text-teal-400">→</span>
+                                <span class="ml-4 text-green-400">"Дозвольте"</span>
+                            </div>
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="text-red-400 mr-3">✗</span>
+                                <span class="mr-4">"Не знаю"</span>
+                                <span class="text-teal-400">→</span>
+                                <span class="ml-4 text-green-400">"Не володію інформацією"</span>
+                            </div>
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="text-red-400 mr-3">✗</span>
+                                <span class="mr-4">"Добре"</span>
+                                <span class="text-teal-400">→</span>
+                                <span class="ml-4 text-green-400">"Слухаюсь"</span>
+                            </div>
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="text-red-400 mr-3">✗</span>
+                                <span class="mr-4">"Як справи, що там"</span>
+                                <span class="text-teal-400">→</span>
+                                <span class="ml-4 text-green-400">"Доповідайте обстановку!"</span>
+                            </div>
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="text-red-400 mr-3">✗</span>
+                                <span class="mr-4">"Спасибі"</span>
+                                <span class="text-teal-400">→</span>
+                                <span class="ml-4 text-green-400">"Дякую"</span>
+                            </div>
+                            <div class="flex items-center bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+                                <span class="text-red-400 mr-3">✗</span>
+                                <span class="mr-4">"Приступайте!"</span>
+                                <span class="text-teal-400">→</span>
+                                <span class="ml-4 text-green-400">"Виконувати!"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Звернення до старших за званням -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-teal-400 mb-4 text-xl">Звернення до старших за званням</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <p>При зверненні до старших за званням обов'язково використовується форма звертання - Пане полковнику/генерал дозвольте звернутися, звертається "звання" та "прізвище" того хто звертається.</p>
+                            <p>Після того як ви вирішили своє питання зі старшим за званням ви повинні запитати дозволу іти - Пане полковнику/генерал, дозвольте іти?</p>
+                            <div class="bg-yellow-900/20 rounded-lg p-4 border border-yellow-700/30">
+                                <p class="font-semibold text-yellow-400 mb-2">У випадку зауваження</p>
+                                <p>У випадку отримання вами зауваження від старшого за званням ви повинні сказати - Винен, виправлюсь.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Звернення до інших військовослужбовців -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-teal-400 mb-4 text-xl">Звернення до інших військовослужбовців</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <p>Звернення до інших військовослужбовців здійснюється по прізвищу або званню!</p>
+                            <div class="bg-indigo-900/20 rounded-lg p-4 border border-indigo-700/30">
+                                <p class="font-semibold text-indigo-300 mb-2">Приклади:</p>
+                                <p>"пане Генерал, дозвольте звернутися?"</p>
+                                <p>"Пане Родителев, дозвольте звернутися?"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 15. Територія Військової частини -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-orange-600 to-orange-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">15. Територія Військової частини</h2>
+                </div>
+                <div class="space-y-6 text-gray-300">
+                    <!-- Вступ -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <p class="text-white leading-relaxed">
+                            У цьому документі докладно описана вся територія Військової частини та рамки дозволеної поведінки для всіх осіб, перебуваючи на цій території.
+                            Ці правила є загальнообов'язковими для всіх громадян країни, що знаходяться на обумовленій території.
+                        </p>
+                    </div>
+
+                    <!-- Загальні положення -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-orange-400 mb-4 text-xl">1. Загальні положення</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <p>
+                                Військова частина (в/ч) - це основна організаційно-штатна одиниця у Збройних Силах, яка може бути частиною більшого з'єднання або існувати самостійно.
+                                Вона має свій номер, найменування та може бути бойовою, адміністративною, навчальною або іншого типу.
+                                Кожна військова частина є юридичною особою та має певний ступінь автономії.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Червона зона -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-red-400 mb-4 text-xl">2. Червона зона</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <p>
+                                Червона Зона - це зона території ЗСУ, а також 15 метрів до ВЧ, в якій заборонено перебувати всім особам за винятком:
+                            </p>
+                            <ul class="space-y-2 ml-4">
+                                <li class="flex items-start">
+                                    <span class="text-red-400 mr-2">•</span>
+                                    <span>Президента та Міністра Оборони</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-400 mr-2">•</span>
+                                    <span>Осіб, які мають перепустку</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-400 mr-2">•</span>
+                                    <span>Військовослужбовців без супроводу</span>
+                                </li>
+                            </ul>
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30 mt-4">
+                                <p class="font-semibold text-red-400 mb-2">При навмисному проникненні:</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <span class="text-red-400 mr-2">•</span>
+                                        <span>Дозволене використання тайзеру</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-400 mr-2">•</span>
+                                        <span>При навмисному проникненні на авто дозволене відкрити вогонь по колесах</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="text-red-300 font-semibold mt-4">Червоною зоною є вся територія Військової Частини.</p>
+                        </div>
+                    </div>
+
+                    <!-- Жовта зона -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-yellow-400 mb-4 text-xl">3. Жовта зона</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <p>
+                                Жовта зона - зона 50м. до ВЧ, в якій дозволено тимчасове перебування (тимчасове означає 5 хвилин пішки та 2 хвилини на авто).
+                            </p>
+                            <div class="bg-yellow-900/20 rounded-lg p-4 border border-yellow-700/30 mt-4">
+                                <p class="font-semibold text-yellow-400 mb-2">Якщо минає час:</p>
+                                <p>Співробітник ЗСУ має право попросити вас покинути територію ЗСУ.</p>
+                                <p class="text-red-300 font-semibold mt-2">Якщо гравець не буде виконувати наказ, гравець буде затриманий співробітниками ЗСУ та НПУ або розстріляний.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Важливо -->
+                    <div class="bg-red-900/30 rounded-xl p-5 border border-red-700/50">
+                        <h3 class="font-semibold text-red-400 mb-4 text-xl">⚠️ Важливо</h3>
+                        <p class="text-white font-bold text-lg leading-relaxed">
+                            Якщо особа намагається потрапити на територію ВЧ відкриваємо вогонь без попередження!
+                        </p>
+                    </div>
+
+                    <!-- Схеми зон -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-orange-400 mb-4 text-xl">Схеми зон</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-slate-900/50 rounded-xl overflow-hidden border border-slate-700/30">
+                                <img src="https://i.ibb.co/zhvzQ96P/1774124096257.png" alt="Схема зон 1" class="w-full h-auto">
+                            </div>
+                            <div class="bg-slate-900/50 rounded-xl overflow-hidden border border-slate-700/30">
+                                <img src="https://i.ibb.co/v6vbkk48/1774124087122.png" alt="Схема зон 2" class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 16. Правила Блокпоста -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">16. Правила Блокпоста</h2>
+                </div>
+                <div class="space-y-6 text-gray-300">
+                    <!-- Визначення -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-amber-400 mb-4 text-xl">Визначення</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <p>
+                                <strong>Блокпост (далі БП)</strong> – певний дорожній укріплений контрольно-пропускний пункт, який створений державними організаціями, посередині проїжджої частини.
+                                Здатний самостійно тримати кругову оборону, також для зупинки, та перевірки громадян.
+                                Вище вказані дії проводяться для того, щоб уникнути проїзду дезертирів, правопорушників, а також під час військового стану (далі ВС) та / або комендантської години - диверсійно-розвідувальних груп (далі ДРГ) нашої або іншої держави, яка скоїла напад.
+                            </p>
+                            <p>
+                                <strong>Стаціонарний пост Патрульної Поліції (Далі Пост ПП)</strong> - місце несення служби нарядами патрульної поліції/СБУ/ЗСУ, обладнане спеціальними службовими приміщеннями, оснащене технічними і спеціальними засобами, інженерними та іншими спорудами, а також територія, закріплена за ними.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Основні положення -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-amber-400 mb-4 text-xl">1. Основні положення</h3>
+                        <div class="space-y-3 text-white leading-relaxed">
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">1.1</span>
+                                <p>Незнання цих правил не звільняє Вас від відповідальності за їх порушення;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">1.2</span>
+                                <p>Правила поширюються на всіх гравців сервера;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">1.3</span>
+                                <p>Головна адміністрація має право змінювати/редагувати/доповнювати правила без повідомлення гравців;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">1.4</span>
+                                <p>За порушення цих правил Ви можете отримати покарання згідно з правилами сервера;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">1.5</span>
+                                <p>Адміністрація має право відхилитися від нормативів покарань у цій темі (якщо це аргументовано);</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">1.6</span>
+                                <p>Виїзд на БП, дозволено лише з мінімальною кількістю - 3 особи на одну смугу (є винятки);</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Правила для державних організацій -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-amber-400 mb-4 text-xl">2. Правила для державних організацій</h3>
+                        <div class="space-y-4 text-white leading-relaxed">
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">3.1</span>
+                                <div>
+                                    <p>Виїзд на БП, дозволено лише з мінімальною кількість 6 осіб (по 3 на одну смугу);</p>
+                                    <p class="text-amber-300 text-sm mt-2">Примітка: на пост патрульної поліції дозволено виїжджати у складі не менше 4 осіб</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">3.2</span>
+                                <div>
+                                    <p>На кожній з смуг має бути половина особового складу, який виїхав на БП;</p>
+                                    <p class="text-amber-300 text-sm mt-2">Приклад: «На БП виїхало 8 осіб, 4 особи заступає на ліву сторону, і 4 особи на праву»;</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">3.3</span>
+                                <p>Головним на БП / пості ПП призначається найстарший за званням, який відповідає за працівників які разом з ним несуть службу на посту;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">3.4</span>
+                                <div>
+                                    <p>На БП в обов'язковому порядку має бути мінімум 2 спецтранспорту (далі СТЗ) (приклад «SPARTAN», «Citroen C4») і МОЗ;</p>
+                                    <p class="text-amber-300 text-sm mt-2">Примітка: якщо МОЗ не відповідає протягом 5 хвилин, співробітники на чолі з командиром (керуючим) маю право виїхати на БП без МОЗу.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">3.5</span>
+                                <p>Якщо одного з співробітників виліт або було вбито, і МОЗ не встиг спасти, співробітники зобов'язані викликати підмогу, якщо протягом 5-ти хвилин немає підмоги – весь особовий склад повертається до головного управління (далі ГУ) або військової частини (далі ВЧ) залежно від фракції;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-amber-600/30 text-amber-400 px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-0.5">3.6</span>
+                                <p>Якщо під час перевірки документів, повз Вас проїхав транспортний засіб (далі ТЗ) та не зупинився, Вам надається право відкрити вогонь, виключно по колесах, задля його зупинки і подальшого заарештування;</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Співробітники зобов'язані -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-green-400 mb-4 text-xl">3. Співробітники зобов'язані</h3>
+                        <div class="space-y-3 text-white leading-relaxed">
+                            <div class="flex items-start">
+                                <span class="text-green-400 mr-3 mt-1">•</span>
+                                <div>
+                                    <p>Показувати посвідчення громадянину, якщо він це забажає;</p>
+                                    <p class="text-green-300 text-sm mt-2">Приклад: бажаю здоров'я! До Вас звертається Підполковник Збройних Сил України Надія Уайт (при необхідності показати посвідчення у розгорнутому вигляді)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-400 mr-3 mt-1">•</span>
+                                <div>
+                                    <p>Перевірити паспорт, звірити з базою "Орієнтувань та розшуків", і перевірити технічну документацію на авто (техпаспорт / водійське посвідчення);</p>
+                                    <p class="text-green-300 text-sm mt-2">Примітка: не потрібно перевіряти техпаспорт у робочих: «Угон», «Водіїв автобусів», таксі "Ontaxi", і т.д;</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-400 mr-3 mt-1">•</span>
+                                <p>Дотримуватися субординації та не вестись на провокації зі сторони громадянина;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-400 mr-3 mt-1">•</span>
+                                <p>Вести відеофіксацію, усіх дій на БП, задля можливого майбутнього оскарження звернення до суду;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-400 mr-3 mt-1">•</span>
+                                <p>Заарештувати особу, яка немає або не бажає пред'явити паспорт, та проїхати до відділку для подальшого встановлення особи;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-400 mr-3 mt-1">•</span>
+                                <p>Пропускати СТЗ інших держ.організацій (НПУ, СБУ, МОЗ, ДСНС, ДКВС та інші), далекобійників («MAN», «MERCEDES», «SCANIA», «Газель», «DAF», «Volvo»), громадський транспорт (автобуси, маршрутки,таксі)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Співробітникам дозволено -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-blue-400 mb-4 text-xl">4. Співробітникам дозволено</h3>
+                        <div class="space-y-3 text-white leading-relaxed">
+                            <div class="flex items-start">
+                                <span class="text-blue-400 mr-3 mt-1">•</span>
+                                <p>Перекривати одну смугу, при щільному русі;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-blue-400 mr-3 mt-1">•</span>
+                                <p>Відкривати вогонь по колесах, якщо транспортний засіб порушує правила перетину БП;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-blue-400 mr-3 mt-1">•</span>
+                                <p>Затримувати громадян, якщо не пред'являє паспорт. (між кожним запитом має пройти 30 секунд)</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-blue-400 mr-3 mt-1">•</span>
+                                <p>Відкрити вогонь на ураження, якщо особа тікає від покарання, відкрила вогонь по Вас або несе небезпеку для вашого життя або інших громадян / співробітників;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-blue-400 mr-3 mt-1">•</span>
+                                <p>Вимагати заглушити двигун ТЗ, та пред'явити документи;</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Співробітникам заборонено -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-red-400 mb-4 text-xl">5. Співробітникам заборонено</h3>
+                        <div class="space-y-3 text-white leading-relaxed">
+                            <div class="flex items-start">
+                                <span class="text-red-400 mr-3 mt-1">•</span>
+                                <p>Відкривати вогонь або наводити зброю, без вагомої на це причини;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-red-400 mr-3 mt-1">•</span>
+                                <p>Спати на посту (стояти АФК);</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-red-400 mr-3 mt-1">•</span>
+                                <p>Порушувати субординацію, або ставитись / спілкуватись без поваги до громадян;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-red-400 mr-3 mt-1">•</span>
+                                <p>Вестися на провокації різного типу;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-red-400 mr-3 mt-1">•</span>
+                                <p>Покидати БП / Пост ПП без вагомої на це причини;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-red-400 mr-3 mt-1">•</span>
+                                <p>Пропускати громадян без перевірки якщо це ваш друг, або по рейтингу або за ніком;</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-red-400 mr-3 mt-1">•</span>
+                                <p>Займати пост без зарядженої табельної вогнепальної зброї, бронежилету, службового автомобіля.</p>
+                            </div>
+                            <div class="bg-red-900/30 rounded-lg p-4 border border-red-700/30 mt-4">
+                                <p class="font-semibold text-red-400">Примітка: За порушення даних правил ви будете отримувати одразу догану / пониження / звільнення, без попередження!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 17. Вартові Пости ЗС України та їх різновиди -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">17. Вартові Пости ЗС України та їх різновиди</h2>
+                </div>
+
+                <div class="space-y-6 text-gray-300">
+                    <!-- Загальні положення -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-amber-400 mb-4 text-xl">1. Загальні положення</h3>
+                        <p class="mb-4">Вартовий пост у Збройних Силах України — це визначене місце або ділянка, яка перебуває під охороною варти. Пост призначається для забезпечення безпеки військових об'єктів, збереження озброєння, техніки, майна та підтримання встановленого порядку.</p>
+                        
+                        <h4 class="text-white font-semibold mb-3">1.1 До вартових постів у ЗСУ належать:</h4>
+                        <ul class="space-y-2 ml-4">
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">•</span>
+                                <span>контрольно-пропускні пункти (КПП);</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">•</span>
+                                <span>склади з майном, боєприпасами чи технікою;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">•</span>
+                                <span>штаби, парки бойових машин;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">•</span>
+                                <span>об'єкти зв'язку та інші важливі військові об'єкти.</span>
+                            </li>
+                        </ul>
+
+                        <h4 class="text-white font-semibold mb-3 mt-4">1.2 Кожен пост має:</h4>
+                        <ul class="space-y-2 ml-4">
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">•</span>
+                                <span>чітко визначені межі;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">•</span>
+                                <span>порядок несення служби;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">•</span>
+                                <span>час зміни варти;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">•</span>
+                                <span>перелік осіб, яких дозволено допускати.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Різновиди вартових постів -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-amber-400 mb-4 text-xl">2. Різновиди вартових постів</h3>
+
+                        <!-- Мед.пункт, казарма, їдальня -->
+                        <div class="mb-6 pb-6 border-b border-slate-600/30">
+                            <h4 class="text-white font-semibold mb-3">Мед.пункт, казарма, їдальня — навчальні пости на території основного житлового корпусу</h4>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                                <h5 class="text-amber-300 font-semibold mb-2">Характеристика постів:</h5>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Дозволено заступати зі звання Рекрут [1]</li>
+                                    <li>• Мінімальний склад — 1</li>
+                                    <li>• Дозволено заступати без наявності зброї</li>
+                                </ul>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                                <img src="https://i.ibb.co/8DSnTNj7/mta-screen-2025-12-24-13-58-28.png" alt="Мед.пункт" class="rounded-lg border border-slate-600/30">
+                                <img src="https://i.ibb.co/qM2HRb6R/mta-screen-2025-12-24-13-54-43.png" alt="Казарма" class="rounded-lg border border-slate-600/30">
+                                <img src="https://i.ibb.co/8vsFQDQ/mta-screen-2025-12-24-13-52-32.png" alt="Їдальня" class="rounded-lg border border-slate-600/30">
+                            </div>
+                        </div>
+
+                        <!-- Вартова вежа -->
+                        <div class="mb-6 pb-6 border-b border-slate-600/30">
+                            <h4 class="text-white font-semibold mb-3">Вартова вежа — вартові пости по периметру ВЧ</h4>
+                            <p class="text-gray-400 mb-3">Варта на них здійснюється для повного контролю дій на території ВЧ та поза нею</p>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                                <h5 class="text-amber-300 font-semibold mb-2">Характеристика посту:</h5>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Дозволено заступати зі звання Солдат [2]</li>
+                                    <li>• Мінімальний склад — 1</li>
+                                    <li>• Наявність зброї — обов'язкова</li>
+                                    <li>• Кількість веж на ВЧ — 25 (Детальніше на мапі)</li>
+                                </ul>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 mt-4">
+                                <img src="https://i.ibb.co/YFTRs1RS/1766581218001.png" alt="Вежа 1" class="rounded-lg border border-slate-600/30">
+                                <img src="https://i.ibb.co/pj5dznQ9/mta-screen-2025-12-24-05-27-40.png" alt="Вежа 2" class="rounded-lg border border-slate-600/30">
+                            </div>
+                        </div>
+
+                        <!-- Бункер -->
+                        <div class="mb-6 pb-6 border-b border-slate-600/30">
+                            <h4 class="text-white font-semibold mb-3">Бункер — особливий пост</h4>
+                            <p class="text-gray-400 mb-3">При варті на бункері Ви повинні бути завжди готові до нападу, адже саме тут знаходиться склад з БК.</p>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                                <h5 class="text-amber-300 font-semibold mb-2">Характеристика посту:</h5>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Дозволено заступати зі звання Ст.Солдат [3]</li>
+                                    <li>• Мінімальний склад — 1</li>
+                                    <li>• Наявність зброї — обов'язкова</li>
+                                </ul>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 mt-4">
+                                <img src="https://i.ibb.co/YTtkC7BW/mta-screen-2025-12-24-01-44-42.png" alt="Бункер 1" class="rounded-lg border border-slate-600/30">
+                                <img src="https://i.ibb.co/Q7d4Lcgj/1766582044326.png" alt="Бункер 2" class="rounded-lg border border-slate-600/30">
+                            </div>
+                        </div>
+
+                        <!-- КПП та АКПП -->
+                        <div class="mb-6 pb-6 border-b border-slate-600/30">
+                            <h4 class="text-white font-semibold mb-3">Контрольно-Пропускний Пункт | Автотранспортний Контрольно-Пропускний Пункт</h4>
+                            <p class="text-gray-400 mb-3">КПП — контрольно-пропускний пункт, спеціальний пост для пішого проходу осіб. Вартовий на КПП повинен перевіряти документи у осіб, що заходять на ВЧ, та дозвіл на покидання ВЧ від Генерала/Полковника у осіб, що її покидають.</p>
+                            <p class="text-gray-400 mb-3">АКПП — автомобільний контрольно-пропускний пункт, спеціальний пост для проїзду осіб на транспортних засобах. Вартовий на АКПП повинен перевіряти документи у осіб, що заїжджають на ВЧ, та дозвіл на покидання ВЧ від Генерала/Полковника у осіб, що її покидають.</p>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                                <h5 class="text-amber-300 font-semibold mb-2">Характеристика постів:</h5>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• КПП: Дозволено заступати зі звання Ст.Солдат [3], Мінімальний склад — 1, Наявність зброї — обов'язкова</li>
+                                    <li>• АКПП: Дозволено заступати зі звання Капрал [4], Мінімальний склад — 1, Наявність зброї — обов'язкова</li>
+                                </ul>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 mt-4">
+                                <img src="https://i.ibb.co/4gnx6GcP/mta-screen-2025-12-24-15-39-12.png" alt="КПП" class="rounded-lg border border-slate-600/30">
+                                <img src="https://i.ibb.co/x8FMmc2G/1766584084491.png" alt="АКПП" class="rounded-lg border border-slate-600/30">
+                            </div>
+                        </div>
+
+                        <!-- Вартовий блокпост -->
+                        <div class="mb-6">
+                            <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30 mb-4">
+                                <p class="text-red-400 font-semibold">Примітка: Вартовий блокпост вже не існує</p>
+                            </div>
+                            <h4 class="text-white font-semibold mb-3">Вартовий блокпост — особливий пост, що знаходиться по дорозі до ВЧ</h4>
+                            <p class="text-gray-400 mb-3">Варта на цьому посту подібна до варти на блокпосту та АКПП.</p>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 opacity-60">
+                                <h5 class="text-amber-300 font-semibold mb-2">Характеристика посту:</h5>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Дозволено заступати зі звання Сержант [5]</li>
+                                    <li>• Мінімальний склад — 2</li>
+                                    <li>• Наявність зброї — обов'язкова</li>
+                                    <li>• Обов'язкова наявність бронетехніки (КрАЗ Спартан, MRAP, БТР-4 тощо)</li>
+                                </ul>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 mt-4 opacity-60">
+                                <img src="https://i.ibb.co/27dW3vmw/mta-screen-2025-12-24-02-01-19.png" alt="Блокпост 1" class="rounded-lg border border-slate-600/30">
+                                <img src="https://i.ibb.co/1GvhZRHc/1766584440007.png" alt="Блокпост 2" class="rounded-lg border border-slate-600/30">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Особливості несення варти на КПП -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-amber-400 mb-4 text-xl">3. Особливості несення варти на КПП</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">4.1.</span>
+                                <span>Кожен вартовий на КПП повинен перевіряти документи, що засвідчують особу тих, хто прибуває до ВЧ.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">4.2.</span>
+                                <span>Кожен вартовий на КПП повинен не дозволяти виходу з території ВЧ військовослужбовцям, що не мають дозволу генерала або полковників на покидання військової частини у робочий час і не мають права на це згідно з інструкціями підрозділів в яких вони несуть службу для виконання службових обов'язків.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">4.3.</span>
+                                <span>Кожен вартовий на КПП повинен не допускати проникнення сторонніх осіб на територію ВЧ.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-400 mr-2">4.4.</span>
+                                <span>Кожен вартовий на КПП повинен не допускати скупчення сторонніх осіб на території КПП. У випадку скупчення сторонніх осіб на території КПП наказати їм відійти за 15 метрів від ВЧ, де вони можуть знаходитись 5 хвилин пішки та 2 хвилини на авто.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Заборони під час варти -->
+                    <div class="bg-red-900/20 rounded-xl p-5 border border-red-700/30">
+                        <h3 class="font-semibold text-red-400 mb-4 text-xl">4. Заборони під час варти</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">•</span>
+                                <span>Кожному вартовому заборонено спати на посту ((АФК)) під час несення варти.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">•</span>
+                                <span>Кожному вартовому заборонено вводити в оману інших військовослужбовців щодо проникнення сторонніх осіб на територію ВЧ.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">•</span>
+                                <span>Кожному вартовому на КПП /АКПП заборонено сидіти на лавочках.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">•</span>
+                                <span>Залишити пост, не попередивши по рації.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">•</span>
+                                <span>Стріляти без причини.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">•</span>
+                                <span>Постійно перезаряджати зброю.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">•</span>
+                                <span>Заборонено нести варту без зброї. (Виключення: пости Мед.Пункт, Казарма, Їдальня)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Як правильно доповідати -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-amber-400 mb-4 text-xl">5. Як правильно доповідати</h3>
+                        <div class="mb-4">
+                            <h4 class="text-white font-semibold mb-2">Випадки, коли потрібно доповідати в рацію:</h4>
+                            <ul class="space-y-2 ml-4">
+                                <li>• При заступанні та покиданні посту потрібно обов'язково доповідати в рацію</li>
+                                <li>• Кожні 10 хвилин варти потрібно обов'язково доповідати стан посту</li>
+                                <li>• При виникненні несподіваних, складних ситуацій, проникненні на ВЧ, потребі в допомозі</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-2">Приклади доповідей:</h4>
+                            <div class="bg-slate-900/50 rounded-lg p-4 font-mono text-sm space-y-2">
+                                <p class="text-green-300">[НК] Доповідає солдат Каліванов, заступив на чергування посту Вежа №1, склад-1 код-1</p>
+                                <p class="text-green-300">[HK] Доповідає солдат Каліванов, продовжую чергування на посту Вежа №1, склад-1 код-1</p>
+                                <p class="text-green-300">[HK] Доповідає солдат Каліванов, закінчив чергування посту Вежа №1, склад-0 код-1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Коди для доповіді -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-amber-400 mb-4 text-xl">6. Коди для доповіді</h3>
+                        <p class="text-gray-400 mb-4">Коди — це спеціальні короткі шифровані фрази для використання у радіозв'язку.</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                                <span class="text-amber-300 font-semibold">КОД 1</span>
+                                <span class="text-gray-300 ml-2">— Стабільний стан</span>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                                <span class="text-amber-300 font-semibold">КОД 2</span>
+                                <span class="text-gray-300 ml-2">— Підозріла людина на КПП</span>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                                <span class="text-amber-300 font-semibold">КОД 3</span>
+                                <span class="text-gray-300 ml-2">— Тривога на ВЧ (всі події на ВЧ)</span>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                                <span class="text-amber-300 font-semibold">КОД 4</span>
+                                <span class="text-gray-300 ml-2">— Військовий стан</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Алгоритм дій при КОД-3 -->
+                    <div class="bg-red-900/20 rounded-xl p-5 border border-red-700/30">
+                        <h3 class="font-semibold text-red-400 mb-4 text-xl">7. Алгоритм дій при КОД-3</h3>
+                        <p class="mb-4">При оголошеному КОД-3 кожен вартовий (окрім вартових КПП) повинен залишити свій пост для пошуку і подальшого затримання або нейтралізації порушника.</p>
+                        <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                            <h4 class="text-white font-semibold mb-2">Алгоритм дій під час КОД-3:</h4>
+                            <p class="text-gray-300">Спробувати затримати порушника та вивести його за територію ВЧ або передати співробітникам національної поліції або СБУ. Якщо порушник загрожує здоров'ю та життю військовослужбовців та громадян, що законно перебувають на території ВЧ, або майну і військовим об'єктам армії, дозволяється застосування вогнепальної зброї для нейтралізації порушника.</p>
+                            <p class="text-gray-300 mt-2">При затриманні або нейтралізації порушника потрібно негайно доповісти про це в рацію.</p>
+                        </div>
+                    </div>
+
+                    <!-- Алгоритм дій при КОД-4 -->
+                    <div class="bg-yellow-900/20 rounded-xl p-5 border border-yellow-700/30">
+                        <h3 class="font-semibold text-yellow-400 mb-4 text-xl">8. Алгоритм дій при КОД-4</h3>
+                        <p class="mb-4">Кожен військовослужбовець при оголошеному "Код 4" в рації повинен прибути на шикування, яке проводить старший по званню на території військової частини</p>
+                        
+                        <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 mb-4">
+                            <h4 class="text-white font-semibold mb-2">Алгоритм дій під час КОД-4 на ВЧ:</h4>
+                            <ul class="space-y-2">
+                                <li>• ССО виїздить в зовнішнє патрулювання військової частини.</li>
+                                <li>• ГУР виїздить в розвідку (в бік АКПП та Залізничних воріт не виїжджаючи до об'їзної дороги).</li>
+                                <li>• ВСП проводить рекрутів у бункер, займає пости.</li>
+                                <li>• НК солдати та старші солдати заступають на пост вежі, рекрути перебувають в бункері.</li>
+                                <li>• ДШВ піднімають тактичну авіацію над ВЧ.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                            <h4 class="text-white font-semibold mb-2">Алгоритм дій під час КОД-4 по країні:</h4>
+                            <ul class="space-y-2">
+                                <li>• ССО виїздить на штучно створений блок-пост.</li>
+                                <li>• ГУР виїздить в розвідку по містах.</li>
+                                <li>• ВСП виїжджають в патрулювання по містах, проводить рекрутів у бункер.</li>
+                                <li>• НК солдати та старші солдати заступають на пост вежі, рекрути перебувають в бункері.</li>
+                                <li>• ДШВ піднімає тактичну авіацію над містами.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Територія ВЧ -->
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                        <h3 class="font-semibold text-amber-400 mb-4 text-xl">9. Територія ВЧ</h3>
+                        <div class="space-y-4">
+                            <div class="bg-red-900/30 rounded-lg p-4 border border-red-700/30">
+                                <h4 class="text-red-400 font-semibold mb-2">ЧЕРВОНА ЗОНА</h4>
+                                <p class="text-gray-300">Це зона території ЗСУ, а також 15 метрів до ВЧ, в якій заборонено перебувати всім особам за винятком: Президента та Міністр Оборони, а також осіб, які мають перепустку та військовослужбовців без супроводу. При навмисному проникненні дозволене використання тайзера, при навмисному проникненні на авто дозволене відкрити вогонь по колесах. Червоною зоною є вся територія Військової Частини.</p>
+                            </div>
+                            <div class="bg-yellow-900/30 rounded-lg p-4 border border-yellow-700/30">
+                                <h4 class="text-yellow-400 font-semibold mb-2">ЖОВТА ЗОНА</h4>
+                                <p class="text-gray-300">Це зона 50м до ВЧ, в якій дозволено тимчасове перебування (тимчасове означає 5 хвилин пішки та 2 хвилини на авто), якщо минає час, співробітник ЗСУ має право попросити громадянина покинути територію ЗСУ. Якщо ж громадянин не буде виконувати наказ, він буде затриманий співробітниками ЗСУ та НПУ або розстріляний (у випадку загрози життю/майну армії).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 py-8">
+        <div class="w-full px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2026 Збройні Сили України</p>
+            <p class="text-gray-500 text-sm mt-2">Військова присяга</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        animateOnScrollElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>

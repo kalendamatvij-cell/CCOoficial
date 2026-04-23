@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила Академії</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #1e293b 100%);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-color: rgba(96, 165, 250, 0.3);
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-8 left-0 right-0 bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-700">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-orange-400">📚</span>
+                    <span class="ml-2 text-sm text-gray-400">Правила Академії</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 rounded-lg text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 border border-slate-600/50 hover:border-slate-500/50">
+                        ← Головна
+                    </a>
+                    <div class="h-6 w-px bg-slate-600"></div>
+                    <a href="zsu.html" class="px-4 py-2 bg-blue-900/30 hover:bg-blue-800/40 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 transition-all duration-300 border border-blue-700/50 hover:border-blue-600/50">
+                        ЗСУ
+                    </a>
+                    <div class="h-6 w-px bg-slate-600"></div>
+                    <a href="sso.html" class="px-4 py-2 bg-yellow-900/30 hover:bg-yellow-800/40 rounded-lg text-sm font-medium text-yellow-400 hover:text-yellow-300 transition-all duration-300 border border-yellow-700/50 hover:border-yellow-600/50">
+                        ССО
+                    </a>
+                    <div class="h-6 w-px bg-slate-600"></div>
+                    <a href="pidvyshchennya.html" class="px-4 py-2 bg-purple-900/30 hover:bg-purple-800/40 rounded-lg text-sm font-medium text-purple-400 hover:text-purple-300 transition-all duration-300 border border-purple-700/50 hover:border-purple-600/50">
+                        ⬆️ Підвищення
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-4 relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-40 right-10 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-white mb-6 animate-on-scroll">
+                Правила Академії
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed animate-on-scroll">
+                Правила, знання та обов'язки для академіків ССО<br>
+                <span class="text-gray-500 text-lg">Статут, патрулювання, тен-коди та RolePlay</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full pb-20">
+        <!-- Що мають здати академіки -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-orange-600 to-orange-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Всі академіки мають здати</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 text-gray-300">
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-orange-400 mr-3">📋</span>
+                        <span class="text-white font-semibold">Статут ССО</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-orange-400 mr-3">⚔️</span>
+                        <span class="text-white font-semibold">Правила нападу на ВЧ</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-orange-400 mr-3">🚓</span>
+                        <span class="text-white font-semibold">Правила патрулювання</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-orange-400 mr-3">🎖️</span>
+                        <span class="text-white font-semibold">Обов'язки бійця ССО</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-orange-400 mr-3">📟</span>
+                        <span class="text-white font-semibold">Тен-коди</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-orange-400 mr-3">🎭</span>
+                        <span class="text-white font-semibold">RolePlay</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Правила нападу на ВЧ -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Правила нападу на військову частину</h2>
+                </div>
+                
+                <!-- Загальні положення -->
+                <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30 mb-6">
+                    <h3 class="font-semibold text-red-400 mb-4 text-xl">1. Загальні положення</h3>
+                    <div class="space-y-3 text-gray-300">
+                        <p class="flex items-start">
+                            <span class="text-red-400 mr-2">1.1.</span>
+                            <span>При нападі на територію військової частини ви зобов'язуєтесь дотримуватись загальних правил.</span>
+                        </p>
+                        <p class="flex items-start">
+                            <span class="text-red-400 mr-2">1.2.</span>
+                            <span>Незнання правил не звільняє вас від відповідальності.</span>
+                        </p>
+                        <p class="flex items-start">
+                            <span class="text-red-400 mr-2">1.3.</span>
+                            <span>Заборонено користуватися недоліками цих правил.</span>
+                        </p>
+                        <p class="flex items-start">
+                            <span class="text-red-400 mr-2">1.4.</span>
+                            <span>Перебування на території військової частини, прирівнюється до нападу на неї, та можуть бути застосовані нижчезазначені правила (є виключення).</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Заборонено -->
+                <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30 mb-6">
+                    <h3 class="font-semibold text-red-400 mb-4 text-xl">2. Заборонено</h3>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.1.</span>
+                                <span class="text-white font-semibold">Нападати на територію військової частини, якщо кількість нападників буде менша 5-х осіб.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                            <p class="text-gray-400 text-sm ml-6 mt-2"><strong>Виняток:</strong> якщо на території військової частини вже знаходиться більше 5-х осіб, то інші нападники можуть проникати на ВЧ в будь-якій кількості.</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Зауважте!</strong> Нападаючи одноосібно ви ризикуєте отримати покарання, тому закликаємо впевнитись у кількості 5 осіб на ВЧ, або нападати на територію у кількості 5 осіб, а не одноосібно.</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Примітка:</strong> кількість нападників враховується під час перетину забору, іншими словами якщо на ВЧ знаходиться 4 гравці з неофіційної організації/без організації, і ще 1 гравець добігає із-за території, це буде вважатись порушенням, тому, що 5 гравців мають перетнути забор одночасно, за короткий термін часу.</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.2.</span>
+                                <span class="text-white font-semibold">Виходити з гри на території військової частини.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                            <p class="text-gray-400 text-sm ml-6 mt-2"><strong>Виняток:</strong> дозволено виходити з гри на території ВЧ, якщо ви знаходитесь в бункері в укритті, та якщо коли ви вийдете, то не перешкодите RP процесу який відбувається поруч.</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.3.</span>
+                                <span class="text-white font-semibold">Використовувати предмети лікування під час перестрілки, але дозволено за укриттями.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.4.</span>
+                                <span class="text-white font-semibold">Нападати та перебувати на території військової частини, якщо у вас немає зброї.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Примітка:</strong> зброя має бути в руках.</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Виняток:</strong> у транспорті покарання не застосовується.</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.5.</span>
+                                <span class="text-white font-semibold">Держ. службовцям використовувати тайзер для переваги над гравцями задля вбивства та вбивати гравця, який знерухомлений.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.6.</span>
+                                <span class="text-white font-semibold">Заборонено заїжджати в бункер на будь-якому транспортному засобі або створювати перешкоди ним, перекривати вхід до бункера / мітки транспортним засобом або ставити об'єкти для створення штучних перешкод до бункера.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Виняток:</strong> дозволено використовувати об'єкти для захисту (створювати бар'єр з мішків).</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.7.</span>
+                                <span class="text-white font-semibold">Заборонено нападати на територію військової частини в заборонений час.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.8.</span>
+                                <span class="text-white font-semibold">Заборонено вбивати гравця після спавна або коли гравець біжить з медпункту до казарми у цивільному.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 40 хвилин</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Виняток:</strong> дозволено лише коли гравець дістав зброю або здійснив напад або відбіг від точки спавну та пройшло 30 секунд.</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.9.</span>
+                                <span class="text-white font-semibold">Заборонено використовувати скіни та аксесуари, які надають перевагу та тварин.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Примітка 1:</strong> малі за висотою, мають перевагу під час бігу, створюють візуальну оману тіла гравця (збільшений об'єкт, не властиво встановлений і тому подібне).</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Примітка 2:</strong> тварин потрібно залишити за межами території за яку ведеться битва.</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Виняток:</strong> балаклава — дозволена для використання.</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.10.</span>
+                                <span class="text-white font-semibold">Заборонено перешкоджати, вбивати, заковувати працівників ДСНС під час того як горить склад на ЗСУ.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 100 хвилин</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.11.</span>
+                                <span class="text-white font-semibold">Заборонено перелітати забор на транспорті.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Примітка:</strong> гравці що перебувають на пасажирських місцях.</p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 30 хвилин</p>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-lg p-4 border border-red-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-red-400 mr-2">2.12.</span>
+                                <span class="text-white font-semibold">Заборонено ремонтувати забор, під час того як поблизу знаходяться гравці з неофіційних організацій.</span>
+                            </p>
+                            <p class="text-red-300 text-sm ml-6">Покарання: Деморган 45 хвилин</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Дозволено -->
+                <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/30">
+                    <h3 class="font-semibold text-green-400 mb-4 text-xl">3. Дозволено</h3>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="bg-green-900/20 rounded-lg p-4 border border-green-700/30">
+                            <p class="flex items-start">
+                                <span class="text-green-400 mr-2">3.1.</span>
+                                <span>PowerGaming, якщо не порушується правило 2.1.</span>
+                            </p>
+                        </div>
+
+                        <div class="bg-green-900/20 rounded-lg p-4 border border-green-700/30">
+                            <p class="flex items-start mb-2">
+                                <span class="text-green-400 mr-2">3.2.</span>
+                                <span class="text-white font-semibold">Військовослужбовці ЗСУ можуть розстріляти нападників, які знаходяться біля заборів військової частини після трьох попереджень.</span>
+                            </p>
+                            <p class="text-green-300 text-sm ml-6">Покарання: Деморган 60 хвилин</p>
+                            <p class="text-gray-400 text-sm ml-6 mt-2"><strong>Примітка:</strong> якщо у гравця була виявлена зброя в руках, то йому висувається 1 попередження, в другому випадку його можуть розстріляти/заарештувати.</p>
+                        </div>
+
+                        <div class="bg-green-900/20 rounded-lg p-4 border border-green-700/30">
+                            <p class="flex items-start">
+                                <span class="text-green-400 mr-2">3.3.</span>
+                                <span>Вбивати або заподіювати шкоду учасникам інших кланів / гравцям без клану в бункері.</span>
+                            </p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Примітка:</strong> навіть, якщо між кланами немає війни.</p>
+                        </div>
+
+                        <div class="bg-green-900/20 rounded-lg p-4 border border-green-700/30">
+                            <p class="flex items-start">
+                                <span class="text-green-400 mr-2">3.4.</span>
+                                <span>Вбивати військовослужбовців ЗСУ чи працівників МВС за для проникнення на територію військової частини.</span>
+                            </p>
+                        </div>
+
+                        <div class="bg-green-900/20 rounded-lg p-4 border border-green-700/30">
+                            <p class="flex items-start">
+                                <span class="text-green-400 mr-2">3.5.</span>
+                                <span>Військовослужбовцям ЗСУ порушувати правило RK.</span>
+                            </p>
+                        </div>
+
+                        <div class="bg-green-900/20 rounded-lg p-4 border border-green-700/30">
+                            <p class="flex items-start">
+                                <span class="text-green-400 mr-2">3.6.</span>
+                                <span>Дозволено використовувати повітряний транспорт з метою крадіжки боєприпасів.</span>
+                            </p>
+                            <p class="text-gray-400 text-sm ml-6"><strong>Примітка:</strong> заборонено використовуючи повітряний транспорт саджати його на криші будівель, ангарів тощо. Дозволено тільки на землю.</p>
+                        </div>
+
+                        <div class="bg-green-900/20 rounded-lg p-4 border border-green-700/30">
+                            <p class="flex items-start">
+                                <span class="text-green-400 mr-2">3.7.</span>
+                                <span class="text-white font-semibold">Дозволено нападати на військову частину упродовж такого часу: 16:00-18:00 та 20:00-22:00</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Таблиця термінів RolePlay -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Терміни RolePlay</h2>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b border-slate-600">
+                                <th class="py-3 px-4 text-purple-400 font-semibold">Назва</th>
+                                <th class="py-3 px-4 text-purple-400 font-semibold">Пояснення</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">RP (RolePlay)</td>
+                                <td class="py-3 px-4">Гра по ролях, де кожен гравець виконує свою роль.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">NonRp (Non Role Play)</td>
+                                <td class="py-3 px-4">Дії персонажа, які він не зміг би здійснити в реальному житті.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">DM (Deathmatch)</td>
+                                <td class="py-3 px-4">Доведення до несвідомого стану гравця, без вагомої на то IC причини.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">FD (Free Damage)</td>
+                                <td class="py-3 px-4">Нанесення шкоди гравцю без вагомої на то IC причини.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">DB (DriveBy)</td>
+                                <td class="py-3 px-4">Нанесення шкоди, доведення до несвідомого стану іншого гравця/транспорту за допомогою транспортного засобу.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">SK (Spawn Kill)</td>
+                                <td class="py-3 px-4">Вбивство гравця на місці відродження.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">TK (Team Kill)</td>
+                                <td class="py-3 px-4">Вбивство члена вашої фракції/клану/команди.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">FF (Friendly Fire)</td>
+                                <td class="py-3 px-4">Нанесення шкоди членам вашої фракції/клану/команди.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">MG (Meta Gaming)</td>
+                                <td class="py-3 px-4">Використання інформації з реального світу, в ігровий.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">PG (Power Gaming)</td>
+                                <td class="py-3 px-4">Зображення свого персонажа героєм.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">RVK (Revenge Kill)</td>
+                                <td class="py-3 px-4">Вбивство з метою помсти.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">RK (Repeat Kill)</td>
+                                <td class="py-3 px-4">Вбивство одного і того ж гравця 2 і більше рази.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">GZ/ZZ (Green Zone)</td>
+                                <td class="py-3 px-4">Зона, де заборонено вбивати/наносити шкоду.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">BH (Bunnyhopping)</td>
+                                <td class="py-3 px-4">Багаторазові стрибки, з метою швидкого переміщення.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">WH (Willihopping)</td>
+                                <td class="py-3 px-4">Вихід з транспортного засобу, з метою швидкого прибуття до пункту призначення.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">FR (Fast Reload)</td>
+                                <td class="py-3 px-4">Баг на швидку перезарядку зброї.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">FM (Fast Moving)</td>
+                                <td class="py-3 px-4">Баг на швидке переміщення.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">CK (Character Kill)</td>
+                                <td class="py-3 px-4">Вбивство гравця з метою повної ліквідації ігрового облікового запису.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">FCK (Fraction Character Kill)</td>
+                                <td class="py-3 px-4">Фракційне РП вбивство.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">NonRP Fly</td>
+                                <td class="py-3 px-4">НонРП польоти (наприклад, 3 сальто на кукурузнику).</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">RDM (Random DeathMatch)</td>
+                                <td class="py-3 px-4">Масове вбивство/нанесення шкоди, без вагомої РП причини.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">OOC (Out Of Character)</td>
+                                <td class="py-3 px-4">Це інформація, яка стосується реального світу (пишеться в оффтоп чат, або /b).</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">IC (In Character)</td>
+                                <td class="py-3 px-4">Це інформація, яка стосується ігрового світу.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">AFK (Away From Keyboard)</td>
+                                <td class="py-3 px-4">Відійшов від клавіатури.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">Ban</td>
+                                <td class="py-3 px-4">Покарання видане адміністратором, після якого гравець не може зайти в гру, до моменту зняття покарання.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">Warn</td>
+                                <td class="py-3 px-4">Покарання видане адміністратором, після якого гравець буде вигнаний з організації (клан/фракція) та не зможе вступити назад, до закінчення покарання.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">Kick</td>
+                                <td class="py-3 px-4">Закінчення ігрового сеансу, в якості покарання за порушення.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">ДеМорган</td>
+                                <td class="py-3 px-4">Тюрма, з якої неможливо вийти РП шляхом.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">TL (Transliteration)</td>
+                                <td class="py-3 px-4">Набір тексту однієї мови іншою.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">MDB (Massive Drive By)</td>
+                                <td class="py-3 px-4">Нанесення шкоди транспорту/гравцям, доведення до несвідомого стану трьох і більше гравців за допомогою транспортного засобу.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">MFA (Massive Free Arrest)</td>
+                                <td class="py-3 px-4">Затримання з доправленням в ІТТ більше трьох гравців (включно) без вагомої IC причини.</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/30">
+                                <td class="py-3 px-4 text-white font-semibold">MDM (Massive DeathMatch)</td>
+                                <td class="py-3 px-4">Доведення трьох і більше гравців до несвідомого стану</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Правила патрулювання -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Правила патрулювання</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-green-900/20 rounded-xl p-5 border border-green-700/30">
+                        <h3 class="font-semibold text-green-400 mb-4 text-xl">Дозволено</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">✓</span>
+                                <span>В патруль дозволено їздити тільки після того, як здали академію та стали Бійцем ССО</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">✓</span>
+                                <span>Відкривати вогонь на ураженням у разі нападу</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">✓</span>
+                                <span>Дозволено патруль однієї людині, але при виявлені небезпеки обов'язковий запит підкріплення</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">✓</span>
+                                <span>Академіку ССО дозволено їхати в патруль тільки з Офіцерами або з Керівництвом</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-red-900/20 rounded-xl p-5 border border-red-700/30">
+                        <h3 class="font-semibold text-red-400 mb-4 text-xl">Заборонено</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">✗</span>
+                                <span>Академіку ССО заборонено їздити в патруль самому</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">✗</span>
+                                <span>Заборонено під час патрулю підкорюватися співробітникам інших фракцій</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">✗</span>
+                                <span>Порушувати ПДР</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-400 mr-2">✗</span>
+                                <span>Виїжджати без доповіді</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/50 rounded-xl p-5 border border-slate-600/30 mt-6">
+                    <h3 class="font-semibold text-blue-400 mb-4 text-xl">Завдання ССО під час патрулю</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-blue-400 mr-2">•</span>
+                            <span>Слідкувати за порядком, тобто зупиняти перестрілки, бійки та конфлікти</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-400 mr-2">•</span>
+                            <span>Спасіння жителів</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-400 mr-2">•</span>
+                            <span>Відбивати напади на об'єкти</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-400 mr-2">•</span>
+                            <span>Допомога іншим Держ. структурам</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-400 mr-2">•</span>
+                            <span>Перевірка підозрілих автомобілей</span>
+                        </li>
+                    </ul>
+                    <p class="text-yellow-400 font-semibold mt-4">За порушення ПДР ми НЕ зупиняємо!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Зони відповідальності -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Зони відповідальності на водному патрулюванні</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 text-center">
+                        <span class="text-cyan-400 text-2xl">🏢</span>
+                        <p class="text-white font-semibold mt-2">ВЧ</p>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 text-center">
+                        <span class="text-cyan-400 text-2xl">🏛️</span>
+                        <p class="text-white font-semibold mt-2">Київ</p>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 text-center">
+                        <span class="text-cyan-400 text-2xl">🏙️</span>
+                        <p class="text-white font-semibold mt-2">Дніпро</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Тен-коди -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Тен-коди та коди</h2>
+                </div>
+
+                <div class="space-y-6 text-gray-300">
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Виїзд у патрулювання в місто: (Тен-Код 1-1)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-1 Дніпро, склад: 1, код: 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Продовження патрулювання в місті: (Тен-Код 1-2)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-2 Дніпро, склад: 1, код: 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Повернення на ВЧ з міста: (Тен-Код 1-3)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-3 Дніпро, склад: 1, код: 1</code>
+                    </div>
+
+                    <div class="border-t border-slate-600/30 pt-4"></div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Виїзд у патрулювання на ВЧ: (Тен-Код 1-1)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-1 ВЧ, склад: 1, код: 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Продовження патрулювання на ВЧ: (Тен-Код 1-2)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-2 ВЧ, склад: 1, код:1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Повернення з патрулювання на ВЧ: (Тен-Код 1-3)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-3 ВЧ, склад: 1, код:1</code>
+                    </div>
+
+                    <div class="border-t border-slate-600/30 pt-4"></div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Запит на підкріплення: (Тен-Код 1-5)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-5 10-20 (місце розташування наприклад СБУ-Д)</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Виїзд на спец.завдання: (Тен-Код 1-6)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-6 СТЗ: Toyota, склад: 1, код: 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Повернення зі спец.завдання на ВЧ: (Тен-Код 1-7)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-7 СТЗ: Toyota, склад: 1</code>
+                    </div>
+
+                    <div class="border-t border-slate-600/30 pt-4"></div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Виїзд по БК: (Тен-Код 6-1)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 6-1 склад: 1 код: 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Загрузив БК, повертаюсь на ВЧ: (Тен-Код 6-2)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 6-2 склад: 1 код: 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Привіз БК на ВЧ: (Тен-Код 6-3)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 6-3 склад: 1 код: 1</code>
+                    </div>
+
+                    <div class="border-t border-slate-600/30 pt-4"></div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">1. Вихід на водне патрулювання: (Тен-Код 1-11)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-11 ВЧ (або місто). Склад 2. Код 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">2. Продовження патрулювання: (Тен-Код 1-12)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-12 ВЧ(або місто), склад: 2, код: 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">3. Повернення на ВЧ з патрулювання: (Тен-Код 1-13)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-13 ВЧ(або місто), склад: 2, код: 1</code>
+                    </div>
+
+                    <div class="border-t border-slate-600/30 pt-4">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Додаток - Спец. транспорт:</h4>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Виїзд у патрулювання в місто на Спец. транспорті: (Тен-Код 1-1)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-1 ОТЗ держ.номер "ССО" Дніпро, склад: 1, код: 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Продовження патрулювання в місті на Спец. транспорті: (Тен-Код 1-2)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-2 ОТЗ держ.номер "ССО" Дніпро, склад: 1, код: 1</code>
+                    </div>
+
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30">
+                        <h4 class="text-yellow-400 font-semibold mb-3">Повернення на ВЧ з міста на спец. транспорті: (Тен-Код 1-3)</h4>
+                        <code class="text-green-300 text-sm">[Посада в ССО] 1-3 ОТЗ держ.номер "ССО" Дніпро, склад: 1, код: 1</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Обов'язки бійця ССО -->
+        <section class="mb-16 scroll-mt-20 animate-on-scroll">
+            <div class="bg-gradient-to-br from-slate-800/70 to-slate-900/70 rounded-2xl p-6 md:p-8 border border-slate-700/50 card-hover backdrop-blur-sm">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl p-4 mr-4 section-icon">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Обов'язки бійця ССО</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 text-gray-300">
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">🚓</span>
+                        <span>Патрулювання по містах</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">🚧</span>
+                        <span>Виїзди на блокпости</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">⚖️</span>
+                        <span>Заходи правового режиму воєнного і надзвичайного стану</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">📢</span>
+                        <span>Військові інформаційно-психологічні операції</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">🛡️</span>
+                        <span>Захист життя громадян та об'єктів держвласності у межах України</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">🔫</span>
+                        <span>Участь у боротьбі з незаконним обігом зброї та наркотиків</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">🏃</span>
+                        <span>Захист Військової Частини від дезертирів</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">💣</span>
+                        <span>Боротьба з тероризмом</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">🎪</span>
+                        <span>Охорона різних важливих подій</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center">
+                        <span class="text-indigo-400 mr-3">🏥</span>
+                        <span>Надання першої медичної допомоги при необхідності</span>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-600/30 flex items-center md:col-span-2">
+                        <span class="text-indigo-400 mr-3">📋</span>
+                        <span>Виконування наказів старших та виконування спец операцій та спец завдань по наказу Старшого Керівництва</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 py-8">
+        <div class="w-full px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2026 Збройні Сили України</p>
+            <p class="text-gray-500 text-sm mt-2">Правила Академії ССО</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
